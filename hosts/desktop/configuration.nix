@@ -53,7 +53,6 @@
 
   # 3) ensure USB-HID modules are in the initrd for hot-plug
   boot.kernelModules = [ "usbhid" "hid-generic" ];
-  home-manager.users."${config.var.username}" = import ./home.nix;
 
   # enable udev rules for openRBG
   services.hardware.openrgb.enable = true;
