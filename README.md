@@ -95,7 +95,7 @@ This folder contains server-related nixos modules. (bitwarden, nextcloud, ...)
    your system:
 
 ```sh
-git clone https://github.com/shaunakpandit/nix ~/.config/nixos
+git clone git@github.com:shaunakpandit/nix.git ~/.config/nixos
 ```
 
 2. Copy the `hosts/laptop` folder, rename it to match your system’s hostname,
