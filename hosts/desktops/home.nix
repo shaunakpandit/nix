@@ -8,7 +8,7 @@
     ../../home/programs/brave
     ../../home/programs/proton
     ../../home/programs/ghostty
-    ../../home/programs/nvf
+    ../../home/programs/neovim
     ../../home/programs/shell
     ../../home/programs/fetch
     ../../home/programs/git
@@ -21,6 +21,8 @@
     ../../home/programs/zathura
     ../../home/programs/nightshift
     ../../home/programs/group/cybersecurity.nix
+    ../../home/programs/games
+
 
     # Scripts
     ../../home/scripts # All scripts
