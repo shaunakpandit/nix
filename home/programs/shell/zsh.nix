@@ -61,8 +61,7 @@ in {
       nix-shell = "nix-shell --command zsh";
 
       # git
-      g = "lazygit";
-      ga = "git add";
+      lz = "lazygit";
       gc = "git commit";
       gcu = "git add . && git commit -m 'Update'";
       gp = "git push";
@@ -75,8 +74,30 @@ in {
       grs = "git reset HEAD~1";
       grh = "git reset --hard HEAD~1";
 
-      gaa = "git add .";
-      gcm = "git commit -m";
+      ga = "git add .";
+      gcam = "git add . && commit -m";
+
+      # open up norg on today's journal
+      norg = ''
+        cd ~/norgotes/ && jj
+      '';
+      jj = "cd ~/norgotes/ && nvim --cmd 'call feedkeys(\",jj,im\")'";
+
+      # config stuff
+      rb = "sudo nixos-rebuild switch --flake ~/.config/nixos#nexus";
+      hr = "hyprctl reload";
+      zsource = "source ~/.zshrc";
+
+      nix-shell = "nix-shell --command zsh";
+
+      # hyprland commands
+      hcl = "hyprctl -j clients | jq '.[] | {class, title}'";
+
+      # run in background
+      bg = ">/dev/null 2>&1 &";
+
+      # ssh
+      singapl = "ssh singapl@192.168.4.28";
     };
 
     initContent =
@@ -92,6 +113,18 @@ in {
           then "echo; ${pkgs.pfetch}/bin/pfetch"
           else ""
         }
+
+        # =============================
+        # Fzf Aliases
+        # =============================
+        alias ff='nvim "$(fzf --tmux 70% -m --preview="bat --color=always {}")"'
+        alias al="alias | fzf"
+
+        # =============================
+        # Navigation
+        # =============================
+        alias ..='cd ..'
+        alias nixos='cd ~/.config/nixos/'
 
         function sesh-sessions() {
           session=$(sesh list -t -c | fzf --height 70% --reverse)

@@ -22,6 +22,9 @@
     ../../home/programs/nightshift
     ../../home/programs/group/cybersecurity.nix
 
+    # Scripts
+    ../../home/scripts # All scripts
+
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
     ../../home/system/caelestia-shell
@@ -29,8 +32,13 @@
     ../../home/system/mime
     ../../home/system/udiskie
 
+    # games
+    ../../home/programs/prismlauncher.nix
+    ../../home/programs/runelite.nix
+    ../../home/programs/nixCitizen.nix
+
     ./variables.nix # Mostly user-specific configuration
-    ./secrets # CHANGEME: You should probably remove this line, this is where I store my secrets
+    # ./secrets # CHANGEME: You should probably remove this line, this is where I store my secrets
   ];
 
   home = {
@@ -49,6 +57,13 @@
       signal-desktop # Signal app, private messages
       stirling-pdf # TODO: Server version
       calibre
+      openrgb # rbg manager
+
+      # gaming
+      protonup-ng
+
+      # entertainment
+      plexamp
 
       # Dev
       go
@@ -76,6 +91,11 @@
 
     inherit (config.var) username;
     homeDirectory = "/home/" + config.var.username;
+
+    sessionVariables = {
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+        "\\\${HOME}/.steam/root/compatibilitytools.d";
+    };
 
     # Import a profile picture, used by the caelestia dashboard
     file.".face" = {source = ./profile_picture.png;};
