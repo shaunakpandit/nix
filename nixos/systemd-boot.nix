@@ -1,19 +1,19 @@
 # Systemd-boot configuration for NixOS
-{pkgs, ...}: {
+{pkgs, lib, ...}: {
   boot = {
     bootspec.enable = true;
     loader = {
       efi.canTouchEfiVariables = true;
       systemd-boot = {
-        enable = true;
+        enable = false;
         consoleMode = "auto";
         configurationLimit = 8;
       };
       grub = {
-        enable = true;
-        efiSupport = true; # Set to true for UEFI systems
-        useOSProber = true; # Detect Windows and other OSes
-        configurationLimit = 8; # Optional: keep only the latest boot configs
+        enable = lib.mkForce true;
+        efiSupport = lib.mkForce true; # Set to true for UEFI systems
+        useOSProber = lib.mkForce true; # Detect Windows and other OSes
+        configurationLimit = lib.mkForce 8; # Optional: keep only the latest boot configs
         device =
           "nodev"; # For UEFI ('nodev'); use actual device for legacy BIOS (e.g., "/dev/sda")
       };
