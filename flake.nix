@@ -43,7 +43,7 @@
 
   outputs = inputs @ {nixpkgs, ...}: {
     nixosConfigurations = {
-      nexus =
+      ploopy =
         # CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
           modules = [

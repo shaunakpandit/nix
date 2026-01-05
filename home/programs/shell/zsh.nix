@@ -82,7 +82,7 @@ in {
       jj = "cd ~/norgotes/ && nvim --cmd 'call feedkeys(\",jj,im\")'";
 
       # config stuff
-      rb = "sudo nixos-rebuild switch --flake ~/.config/nixos#nexus";
+      rb = "sudo nixos-rebuild switch --flake ~/.config/nixos#ploopy";
       hr = "hyprctl reload";
       zsource = "source ~/.zshrc";
 

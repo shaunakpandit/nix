@@ -5,7 +5,7 @@
   ];
 
   config.var = {
-    hostname = "nexus";
+    hostname = "ploopy";
     username = "shaunak";
     configDirectory = "/home/" + config.var.username
       + "/.config/nixos"; # The path of the nixos configuration directory
