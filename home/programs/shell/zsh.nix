@@ -58,8 +58,6 @@ in {
       note = "notes";
       tmp = "nvim /tmp/$(date | sed 's/ //g;s/\\.//g').md";
 
-      nix-shell = "nix-shell --command zsh";
-
       # git
       lz = "lazygit";
       gc = "git commit";
