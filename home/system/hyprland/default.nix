@@ -104,7 +104,7 @@ in {
         gaps_in = gaps-in;
         gaps_out = gaps-out;
         border_size = border-size;
-        layout = "master";
+        layout = "dwindle";
         "col.inactive_border" = lib.mkForce background;
       };
 
