@@ -35,9 +35,7 @@
     ../../home/system/udiskie
 
     # games
-    ../../home/programs/prismlauncher.nix
-    ../../home/programs/runelite.nix
-    ../../home/programs/nixCitizen.nix
+    ../../home/programs/games
 
     ./variables.nix # Mostly user-specific configuration
     # ./secrets # CHANGEME: You should probably remove this line, this is where I store my secrets
