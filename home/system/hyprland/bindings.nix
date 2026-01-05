@@ -7,7 +7,7 @@
       [
         "$mod,RETURN, exec, uwsm app -- ${pkgs.ghostty}/bin/ghostty" # Ghostty (terminal)
         "$mod,E, exec,  uwsm app -- ${pkgs.xfce.thunar}/bin/thunar" # Thunar
-        "$mod,B, exec,  uwsm app -- ${pkgs.vivaldi}/bin/vivaldi" # Browser (Vivaldi)
+        "$mod,B, exec,  uwsm app -- ${pkgs.brave}/bin/brave" # Browser (Vivaldi)
         "$mod,K, exec,  uwsm app -- ${pkgs.proton-pass}/bin/proton-pass" # Proton Pass
         "$mod,V, exec,  uwsm app -- ${pkgs.protonvpn-gui}/bin/protonvpn-app" # Proton VPN
         "$mod,A, exec,  uwsm app -- env WEBKIT_DISABLE_COMPOSITING_MODE=1 ${pkgs.proton-authenticator}/bin/proton-authenticator" # Proton Auth
@@ -34,7 +34,7 @@
 
           # Exec with rules https://wiki.hypr.land/Configuring/Dispatchers/#executing-with-rules
           # Tav
-          "$shiftMod, T, exec, [workspace special silent; float; size 585 1050; move 400 437] zen-beta --private-window http://192.168.4.28:8000/"
+          "$shiftMod, T, exec, [workspace special silent; float; size 585 1050; move 400 437] brave --private-window http://192.168.4.28:8000/"
           "$shiftMod, M, exec, [workspace special silent; float; size 1200 1550;] ${pkgs.ghostty}/bin/ghostty -e btop"
           # "$shiftMod, n, exec, [workspace 2 silent;] ${pkgs.ghostty}/bin/ghostty -e zsh -lc 'source ~/.zshrc && cd ~/norgotes/ && nvim --cmd 'call feedkeys(',jj,im')''"
           "$shiftMod, n, exec, [workspace 2] ${pkgs.ghostty}/bin/ghostty -e sh -lc 'cd ~/norgotes && nvim --cmd \"call feedkeys(\\\",jj,im\\\")\"'"
@@ -65,15 +65,6 @@
           "$shiftMod,s, movetoworkspace, special" # move to a specialworkspace
           "$mod,s, togglespecialworkspace" # go to the special workspace
 
-          # "$shiftMod,Left, focusmonitor, -1" # Focus previous monitor
-          # "$shiftMod,Right, focusmonitor, 1" # Focus next monitor
-          # "$shiftMod,h, layoutmsg, addmaster" # Add to master
-          # "$shiftMod,l, layoutmsg, removemaster" # Remove from master
-
-          "$mod,PRINT, exec, screenshot region" # Screenshot region
-          ",PRINT, exec, screenshot monitor" # Screenshot monitor
-          "$shiftMod,PRINT, exec, screenshot window" # Screenshot window
-          "ALT,PRINT, exec, screenshot region swappy" # Screenshot region then edit
       ]
       ++ (builtins.concatLists (builtins.genList (i: let
           ws = i + 1;
