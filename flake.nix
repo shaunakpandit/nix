@@ -30,6 +30,12 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-citizen.url = "github:LovingMelody/nix-citizen";
+    # Optional - updates underlying without waiting for nix-citizen to update
+    nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
+
     # Server
     eleakxir.url = "github:anotherhadi/eleakxir";
     nixarr.url = "github:rasmus-kirk/nixarr";
@@ -37,7 +43,7 @@
 
   outputs = inputs @ {nixpkgs, ...}: {
     nixosConfigurations = {
-      nixy =
+      nexus =
         # CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
           modules = [
@@ -47,10 +53,27 @@
                 inherit inputs;
               };
             }
-            inputs.nixos-hardware.nixosModules.omen-16-n0005ne # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
-            ./hosts/laptop/configuration.nix # CHANGEME: change the path to match your host folder
+
+              inputs.nix-citizen.nixosModules.StarCitizen
+              {
+                # Cachix setup
+                nix.settings = {
+                  substituters = [ "https://nix-citizen.cachix.org" ];
+                  trusted-public-keys = [
+                    "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
+                  ];
+                };
+                nix-citizen.starCitizen = {
+                  enable = true;
+                  preCommands = ''
+                    unset SDL_VIDEODRIVER
+                  '';
+                };
+              }
+
+            ./hosts/desktop/configuration.nix # CHANGEME: change the path to match your host folder
           ];
         };
       # Jack is my server

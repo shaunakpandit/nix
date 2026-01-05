@@ -31,7 +31,6 @@
     ../../home/system/hyprland
     # ../../home/system/hypridle
     ../../home/system/hyprlock
-    ../../home/system/hyprpanel
     ../../home/system/hyprpaper
     ../../home/system/wofi
     ../../home/system/zathura
@@ -111,9 +110,6 @@
       STEAM_EXTRA_COMPAT_TOOLS_PATHS =
         "\\\${HOME}/.steam/root/compatibilitytools.d";
     };
-
-    # Import my profile picture, used by the hyprpanel dashboard
-    file.".face.icon" = { source = ./profile_picture.png; };
 
     # Don't touch this
     stateVersion = "24.05";
