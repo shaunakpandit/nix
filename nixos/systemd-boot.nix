@@ -9,6 +9,14 @@
         consoleMode = "auto";
         configurationLimit = 8;
       };
+      grub = {
+        enable = true;
+        efiSupport = true; # Set to true for UEFI systems
+        useOSProber = true; # Detect Windows and other OSes
+        configurationLimit = 8; # Optional: keep only the latest boot configs
+        device =
+          "nodev"; # For UEFI ('nodev'); use actual device for legacy BIOS (e.g., "/dev/sda")
+      };
     };
     tmp.cleanOnBoot = true;
     kernelPackages =
