@@ -15,26 +15,19 @@
         "$mod,C, exec,  uwsm app -- ${pkgs.vivaldi}/bin/vivaldi --profile-directory=Default --app-id=ojibjkjikcpjonjjngfkegflhmffeemk" # Proton Calendar (PWA)
         "$mod,I, exec,  uwsm app -- ${pkgs.vivaldi}/bin/vivaldi --profile-directory=Default --app-id=lcfjlhjhpmdjimnbkdfjnkojodddgfmd" # Proton Lumo (PWA)
 
-        "$mod,Q, killactive," # Close window
-        "$mod,T, togglefloating," # Toggle Floating
-        "$mod,F, fullscreen" # Toggle Fullscreen
-        "$mod,left, movefocus, l" # Move focus left
-        "$mod,right, movefocus, r" # Move focus Right
-        "$mod,up, movefocus, u" # Move focus Up
-        "$mod,down, movefocus, d" # Move focus Down
         "$shiftMod,up, focusmonitor, -1" # Focus previous monitor
         "$shiftMod,down, focusmonitor, 1" # Focus next monitor
         "$shiftMod,left, layoutmsg, addmaster" # Add to master
         "$shiftMod,right, layoutmsg, removemaster" # Remove from master
 
           # media controls
-          "$mod,I, exec, ${pkgs.playerctl}/bin/playerctl previous" # play previous
-          "$mod,O, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # toggle play/pause
-          "$mod,P, exec, ${pkgs.playerctl}/bin/playerctl next" # play next
+          # "$mod,I, exec, ${pkgs.playerctl}/bin/playerctl previous" # play previous
+          # "$mod,O, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # toggle play/pause
+          # "$mod,P, exec, ${pkgs.playerctl}/bin/playerctl next" # play next
 
           # Exec with rules https://wiki.hypr.land/Configuring/Dispatchers/#executing-with-rules
           # Tav
-          "$shiftMod, T, exec, [workspace special silent; float; size 585 1050; move 400 437] brave --private-window http://192.168.4.28:8000/"
+          "$shiftMod, T, exec, [workspace special silent; float; size 585 1050; move 400 437] ${pkgs.vivaldi}/bin/vivaldi --private-window http://192.168.4.28:8000/"
           "$shiftMod, M, exec, [workspace special silent; float; size 1200 1550;] ${pkgs.ghostty}/bin/ghostty -e btop"
           # "$shiftMod, n, exec, [workspace 2 silent;] ${pkgs.ghostty}/bin/ghostty -e zsh -lc 'source ~/.zshrc && cd ~/norgotes/ && nvim --cmd 'call feedkeys(',jj,im')''"
           "$shiftMod, n, exec, [workspace 2] ${pkgs.ghostty}/bin/ghostty -e sh -lc 'cd ~/norgotes && nvim --cmd \"call feedkeys(\\\",jj,im\\\")\"'"
@@ -43,7 +36,7 @@
           # "$mod, A, exec, [float; size 1152 1587; move 84 149] qutebrowser https://webui.jssp.io/"
 
           # Youtube
-          "$shiftMod, Y, exec, [workspace 1 silent; fullscreen] zen-beta https://youtube.com"
+          # "$shiftMod, Y, exec, [workspace 1 silent; fullscreen] zen-beta https://youtube.com"
 
           # screen on and off
           # src: https://wiki.hypr.land/Configuring/Dispatchers/
