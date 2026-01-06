@@ -108,7 +108,7 @@ in {
     optipng
     jpegoptim
     pfetch
-    btop
+    btop-cuda
   ];
 
   xdg.portal = {
