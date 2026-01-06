@@ -70,19 +70,15 @@
 
     polarity = "dark";
     image = pkgs.fetchurl {
-      # abstract green
-      # url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/abstract_green.png";
-      # sha256 = "sha256-91gf4vjKglZILEiQp9QDtC9Uu7nxqErLJm5i6fZM5EE=";
-      # starfield
-      # url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/dark-starfields.png";
-      # sha256 = "sha256-g29ZJSNTQxZ+Anv38yGgAciDUlIQezSMd3osqb9b5KE=";
       # Neon sign
       # url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/staircase.jpg";
       # sha256 = "sha256-dUSrAjvFzkXr2Xb5/kPkS5fwB66CycPrB8CqcFGCycM=";
       # singularity
       # url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/planet_minimal.png";
-      # nat-geo with wave
-      url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/wave_black.png";
+      # sha256 = "sha256-dUSrAjvFzkXr2Xb5/kPkS5fwB66CycPrB8CqcFGCycM=";
+
+      # mountains and stars
+      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/moutains-and-stars_black.png";
       sha256 = "sha256-AFYMOgrEgN6cawguWYBneyJhH/7LPXihtcnfMr9Gd8c=";
     };
   };

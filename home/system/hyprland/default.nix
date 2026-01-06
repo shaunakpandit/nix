@@ -90,6 +90,7 @@ in {
         "WLR_BACKEND,vulkan"
         "WLR_RENDERER,vulkan"
         "WLR_NO_HARDWARE_CURSORS,1"
+         # TODO: test if I can add ,x11 , windows 
         "SDL_VIDEODRIVER,wayland"
         "CLUTTER_BACKEND,wayland"
       ];
@@ -142,6 +143,14 @@ in {
         "match:class protonvpn-app, float on"
         "match:class protonvpn-app, center on"
         "match:class protonvpn-app, size 500 400"
+
+        # MY WINDOW RULES
+        "opacity 1.0 1.0 override, match:class ^(net-runelite-client-RuneLite)$"
+        "float on, match:class ^(net-runelite-client-RuneLite)$"
+        "size 1200 850, match:class ^(net-runelite-client-RuneLite)$"
+
+        # add blur for ghostty
+        "no_blur on, match:class ghostty"
       ];
 
       misc = {
