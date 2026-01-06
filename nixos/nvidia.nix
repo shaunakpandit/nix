@@ -19,7 +19,7 @@ in {
   ];
 
   # Blacklist nouveau to avoid conflicts
-  boot.blacklistedKernelModules = ["nouveau"];
+  boot.blacklistedKernelModules = ["nouveau" "nova-core"];
 
   # Environment variables for better compatibility
   environment.variables = {

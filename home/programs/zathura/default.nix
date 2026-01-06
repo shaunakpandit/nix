@@ -5,11 +5,14 @@
     enable = true;
 
     options = {
-      guioptions = "v";
-      adjust-open = "width";
+      guioptions = "sv";
+      adjust-open = "best-fit";
       statusbar-basename = true;
       render-loading = false;
-      scroll-step = 120;
+      scroll-page-aware = true;
+      scroll-step = 100;
+      recolor = true;
+      recolor-keephue = true;
     };
   };
 }
