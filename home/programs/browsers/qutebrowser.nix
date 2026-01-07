@@ -175,7 +175,8 @@ in {
          # https://qutebrowser.org/doc/help/commands.html#cmd-set-text
         "  " = "cmd-set-text -s :tab-select";
         " sb" = "cmd-set-text -s :quickmark-load";
-        " /" = ":search";
+        " /" = "search";
+        " bo" = "tab-only";
 
         " 1" = "tab-focus 1";
         " 2" = "tab-focus 2";
