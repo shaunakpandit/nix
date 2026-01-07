@@ -71,7 +71,7 @@ let
     };
   };
 in {
-  imports = [ ../duckduckgo-colorscheme ];
+  imports = [ ./ddgColorScheme.nix ];
 
   programs.qutebrowser = {
     enable = true;
