@@ -91,6 +91,7 @@ in {
     quickmarks = {
       home = "${homepage}/build/index.html";
       openrouter = "https://openrouter.ai/models";
+      webui = "https://webui.jssp.io/";
       mynixos = "https://mynixos.com";
       github = "https://github.com";
       proton = "https://mail.proton.me/u/0/inbox";
