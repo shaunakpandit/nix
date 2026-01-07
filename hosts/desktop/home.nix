@@ -22,6 +22,7 @@
     ../../home/programs/nightshift
     ../../home/programs/group/cybersecurity.nix
     ../../home/programs/games
+    ../../home/programs/browsers
 
 
     # Scripts
