@@ -90,22 +90,15 @@ in {
 
     quickmarks = {
       home = "${homepage}/build/index.html";
-      server = "https://home.anotherhadi.com";
-      jack = "https://home.anotherhadi.com";
+      openrouter = "https://openrouter.ai/models";
       mynixos = "https://mynixos.com";
       github = "https://github.com";
-      outlook = "https://outlook.office.com/mail/";
-      office = "https://www.office.com/?auth=2";
-      teams = "https://teams.microsoft.com/_";
-      casa = "http://192.168.2.16:8081/#/";
       proton = "https://mail.proton.me/u/0/inbox";
-      cloudflare-one = "https://one.dash.cloudflare.com/";
-      chatgpt = "https://chat.openai.com/";
-      nixvim = "https://nix-community.github.io/nixvim/";
       hyprland = "https://wiki.hyprland.org/";
       nerdfont = "https://www.nerdfonts.com/cheat-sheet";
       youtube = "https://youtube.com/";
       cloudflare = "https://dash.cloudflare.com/";
+      starcitizen = "https://robertsspaceindustries.com/en"
     };
 
     settings = {
@@ -174,8 +167,8 @@ in {
         " p" = "tab-move -";
         " n" = "tab-move +";
         " w" = "tab-close";
-        "J" = "previous-tab";
-        "K" = "next-tab";
+        "J" = "tab-prev";
+        "K" = "tab-next";
 
         " 1" = "tab-focus 1";
         " 2" = "tab-focus 2";
