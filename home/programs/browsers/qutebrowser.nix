@@ -177,6 +177,7 @@ in {
         " sb" = "cmd-set-text -s :quickmark-load";
         " /" = "search";
         " bo" = "tab-only";
+        " bd" = "tab-close";
 
         " 1" = "tab-focus 1";
         " 2" = "tab-focus 2";
