@@ -241,6 +241,8 @@ in {
 
       c.tabs.padding = {"bottom": 6, "left": 7, "right": 7, "top": 6}
       c.statusbar.padding = {"bottom": 6, "left": 7, "right": 7, "top": 6}
+        
+      c.colors.webpage.darkmode.enabled = True
 
       config.load_autoconfig(True)
     '';
