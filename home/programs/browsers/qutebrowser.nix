@@ -170,8 +170,8 @@ in {
         " w" = "tab-close";
         "J" = "tab-prev";
         "K" = "tab-next";
-        "  " = "tab-select";
-        " sb" = "quickmark-list";
+        "  " = "tab-select ";
+        " sb" = "quickmark-load ";
         " /" = "search";
 
         " 1" = "tab-focus 1";
