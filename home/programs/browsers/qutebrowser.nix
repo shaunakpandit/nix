@@ -123,7 +123,7 @@ in {
 
       completion = {
         height = "30%";
-        open_categories = [ "history" ];
+        open_categories = [ "history" "bookmarks" ];
         scrollbar = {
           padding = 0;
           width = 0;
@@ -174,6 +174,8 @@ in {
         " p" = "tab-move -";
         " n" = "tab-move +";
         " w" = "tab-close";
+        "J" = "previous-tab";
+        "K" = "next-tab";
 
         " 1" = "tab-focus 1";
         " 2" = "tab-focus 2";
