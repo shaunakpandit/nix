@@ -170,6 +170,9 @@ in {
         " w" = "tab-close";
         "J" = "tab-prev";
         "K" = "tab-next";
+        "  " = "tab-select";
+        " sb" = "quickmark-sel";
+        " /" = "search"
 
         " 1" = "tab-focus 1";
         " 2" = "tab-focus 2";
