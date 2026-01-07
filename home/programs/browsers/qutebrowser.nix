@@ -171,8 +171,8 @@ in {
         "J" = "tab-prev";
         "K" = "tab-next";
         "  " = "tab-select";
-        " sb" = "quickmark-sel";
-        " /" = "search"
+        " sb" = "quickmark-list";
+        " /" = "search";
 
         " 1" = "tab-focus 1";
         " 2" = "tab-focus 2";
