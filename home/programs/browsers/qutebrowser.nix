@@ -171,9 +171,9 @@ in {
         " w" = "tab-close";
         "J" = "tab-prev";
         "K" = "tab-next";
-        "  " = ":tab-select ";
-        " sb" = ":quickmark-load ";
-        " /" = ":search";
+        "  " = "cmd-set-text tab-select ";
+        " sb" = "cmd-set-text quickmark-load ";
+        " /" = "cmd-set-text search";
 
         " 1" = "tab-focus 1";
         " 2" = "tab-focus 2";
