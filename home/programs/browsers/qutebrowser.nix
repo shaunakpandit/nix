@@ -172,9 +172,10 @@ in {
         " w" = "tab-close";
         "J" = "tab-prev";
         "K" = "tab-next";
-        "  " = "cmd-set-text tab-select ";
-        " sb" = "cmd-set-text quickmark-load ";
-        " /" = "cmd-set-text search";
+         # https://qutebrowser.org/doc/help/commands.html#cmd-set-text
+        "  " = "cmd-set-text -s :tab-select";
+        " sb" = "cmd-set-text -s :quickmark-load";
+        " /" = "cmd-set-text :search";
 
         " 1" = "tab-focus 1";
         " 2" = "tab-focus 2";
