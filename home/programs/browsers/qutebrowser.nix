@@ -162,6 +162,7 @@ in {
     };
 
     keyBindings = {
+      # learn commands https://qutebrowser.org/doc/help/commands.html
       normal = {
         "gh" = "open ${homepage}/build/index.html";
         "gs" = "open https://home.anotherhadi.com";
