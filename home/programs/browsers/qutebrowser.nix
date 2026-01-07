@@ -98,7 +98,7 @@ in {
       nerdfont = "https://www.nerdfonts.com/cheat-sheet";
       youtube = "https://youtube.com/";
       cloudflare = "https://dash.cloudflare.com/";
-      starcitizen = "https://robertsspaceindustries.com/en"
+      starcitizen = "https://robertsspaceindustries.com/en";
     };
 
     settings = {
