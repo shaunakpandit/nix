@@ -101,6 +101,7 @@ in {
       cloudflare = "https://dash.cloudflare.com/";
       starcitizen = "https://robertsspaceindustries.com/en";
       gmail = "https://mail.google.com/mail/u/0/#inbox";
+      reddit = "https://www.reddit.com/";
     };
 
     settings = {
