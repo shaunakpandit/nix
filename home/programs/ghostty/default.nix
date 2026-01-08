@@ -2,7 +2,7 @@
   # Ensure alacritty package installed
   home.packages = with pkgs; [ ghostty ];
 
-  home.file.".config/ghostty/themes/darkmetalEmperor.conf".source =
+  home.file.".config/ghostty/themes/blackmetalImortal.conf".source =
     ./themes/darkmetalEmperor.conf;
 
   # Install alacritty via home-manager module

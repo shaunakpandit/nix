@@ -1,7 +1,7 @@
 { config, lib, ... }: {
   imports = [
     # Choose your theme here:
-    ../../themes/blackMetalRed.nix
+    ../../themes/blackMetalImortal.nix
   ];
 
   config.var = {
