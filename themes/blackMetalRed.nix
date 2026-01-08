@@ -83,7 +83,7 @@
 
       # svdden death 
       url = "https://raw.githubusercontent.com/shaunakpandit/wallpapers/main/Desktop/SvddenDeathBackgroundSkinny.png";
-      sha256 = "sha256-xVhaeAGs4U1zpx/WlGv17Vtr3uw92qNq0JvgXqAnEpE=";
+      sha256 = "sha256-PCiiNuRtNaVDJBZFh0znxUbADX/Wd3j0+xOnkoiWXNw=";
     };
   };
 }
