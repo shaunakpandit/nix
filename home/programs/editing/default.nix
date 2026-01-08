@@ -1,3 +1,3 @@
 {
-    import = [./gimp.nix];
+    imports = [./gimp.nix];
 }
