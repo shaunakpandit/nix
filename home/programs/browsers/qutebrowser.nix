@@ -77,7 +77,7 @@ in {
     enable = true;
 
     searchEngines = {
-      "DEFAULT" = "https://duckduckgo.com/?q={}&ia=web";
+      "DEFAULT" = "https://google.com/search?q={}";
       "d" = "https://duckduckgo.com/?q={}&ia=web";
       "g" = "https://google.com/search?q={}";
       "y" = "https://youtube.com/results?search_query={}";

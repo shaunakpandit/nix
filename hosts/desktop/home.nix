@@ -23,6 +23,7 @@
     ../../home/programs/group/cybersecurity.nix
     ../../home/programs/games
     ../../home/programs/browsers
+    ../../home/programs/editing
 
 
     # Scripts
