@@ -32,11 +32,11 @@
       base07= "#c1c1c1";
       base08= "#5f8787";
       base09= "#aaaaaa";
-      base0A= "#556677";
-      base0B= "#7799bb";
+      base0A= "#79241f";
+      base0B= "#f8f7f2";
       base0C= "#aaaaaa";
       base0D= "#888888";
-      base0E= "#b87ab8";
+      base0E= "#999999";
       base0F= "#444444";
     };
 
