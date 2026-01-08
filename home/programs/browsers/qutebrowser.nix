@@ -102,6 +102,7 @@ in {
       starcitizen = "https://robertsspaceindustries.com/en";
       gmail = "https://mail.google.com/mail/u/0/#inbox";
       reddit = "https://www.reddit.com/";
+      themes = "https://tinted-theming.github.io/tinted-gallery/";
     };
 
     settings = {
