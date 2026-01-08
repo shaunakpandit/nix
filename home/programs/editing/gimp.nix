@@ -1,5 +1,0 @@
-{...}: {
-    programs.gimp = {
-        enable = true;
-    };
-}
