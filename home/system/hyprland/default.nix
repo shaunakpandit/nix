@@ -71,7 +71,12 @@ in {
       # set primary monitor as workspace 1 monitor
       workspace = [ 
         "1, monitor:DP-4"
+        "3, monitor:DP-4"
+        "4, monitor:DP-4"
+        "5, monitor:DP-4"
         "2, monitor:DP-6"
+        "9, monitor:DP-6"
+        "8, monitor:DP-6"
       ];
 
       env = [
