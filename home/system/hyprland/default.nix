@@ -68,7 +68,8 @@ in {
         "DP-6, highrr, -2160x-1300, 1, transform, 3, vrr, 1"
       ];
 
-      # set primary monitor as workspace 1 monitor
+      # assign workspaces to certain monitors
+      # ensures that navigating to a certain workspace opens it on the correct monitor
       workspace = [ 
         "1, monitor:DP-4"
         "3, monitor:DP-4"
