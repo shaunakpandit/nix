@@ -75,7 +75,6 @@
       python3
       jq
       just
-      pnpm
       air
       duckdb
 

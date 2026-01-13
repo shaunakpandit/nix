@@ -63,12 +63,22 @@ in {
       ];
 
       monitor = [
+        # ", preferred, auto, 1"
         "DP-4, 3840x2160@239.99, 0x0, 1, vrr, 1"
         "DP-6, highrr, -2160x-1300, 1, transform, 3, vrr, 1"
       ];
 
-      # set primary monitor as workspace 1 monitor
-      workspace = [ "name:1, monitor:DP-4" ];
+      # assign workspaces to certain monitors
+      # ensures that navigating to a certain workspace opens it on the correct monitor
+      workspace = [ 
+        "1, monitor:DP-4"
+        "3, monitor:DP-4"
+        "4, monitor:DP-4"
+        "5, monitor:DP-4"
+        "2, monitor:DP-6"
+        "9, monitor:DP-6"
+        "8, monitor:DP-6"
+      ];
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
