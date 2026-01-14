@@ -52,6 +52,7 @@ in {
     };
     openssh = {
       enable = true;
+    };
   };
   console.keyMap = keyboardLayout;
 
