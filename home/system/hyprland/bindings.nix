@@ -28,8 +28,9 @@
 
           # Exec with rules https://wiki.hypr.land/Configuring/Dispatchers/#executing-with-rules
           # Tav
-          "$shiftMod, T, exec, [workspace special silent; float; size 585 1050; move 400 437] ${pkgs.brave}/bin/brave --incognito --new-window http://192.168.4.28:8000/"
-          "$shiftMod, M, exec, [workspace special silent; float; size 1200 1550;] ${pkgs.ghostty}/bin/ghostty -e btop"
+          "$shiftMod, T, exec, [workspace special silent; float; size 585 1050;] ${pkgs.brave}/bin/brave --incognito --new-window http://192.168.4.28:8000/"
+          # "$shiftMod, M, exec, [workspace special silent; float; size 1200 1550;] ${pkgs.ghostty}/bin/ghostty -e btop"
+          "$shiftMod, M, exec, [workspace 2] ${pkgs.ghostty}/bin/ghostty -e btop"
           # "$shiftMod, n, exec, [workspace 2 silent;] ${pkgs.ghostty}/bin/ghostty -e zsh -lc 'source ~/.zshrc && cd ~/norgotes/ && nvim --cmd 'call feedkeys(',jj,im')''"
           "$shiftMod, n, exec, [workspace 2] ${pkgs.ghostty}/bin/ghostty -e sh -lc 'cd ~/norgotes && nvim --cmd \"call feedkeys(\\\",jj,im\\\")\"'"
 
