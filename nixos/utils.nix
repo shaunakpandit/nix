@@ -50,6 +50,8 @@ in {
       enable = true;
       resyncTimer = "10m";
     };
+    openssh = {
+      enable = true;
   };
   console.keyMap = keyboardLayout;
 
