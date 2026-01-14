@@ -9,10 +9,20 @@
       enable = true;
       gamescopeSession = {
         enable = true;
-        args = [ "--adaptive-sync" "--hdr-enabled" "--steam" "--rt" ];
+        args = [
+          "--adaptive-sync"
+          "--hdr-enabled"
+          "--steam"
+          "--rt"
+          # for HDR support
+          "--cm-fs-passthrough=0"
+          "--cm-auto-hdr=2"
+        ];
         env = {
           WLR_RENDERER = "vulkan";
           DXVK_HDR = "1";
+          PROTON_ENABLE_HDR = "1";
+          ENABLE_HDR_WSI = "1";
           ENABLE_GAMESCOPE_WSI = "1";
           WINE_FULLSCREEN_FSR = "1";
         };
