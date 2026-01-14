@@ -10,7 +10,7 @@
       { id = "dbepggeogbaibhgnhhndojpepiihcmeb"; } ## vimium
       { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } ## youtube sponserBlock
       { id = "ghmbeldphafepmbegfdlkpapadhbakde"; } ## protonPass
-    ]
+    ];
   };
 
   home.sessionVariables = {
