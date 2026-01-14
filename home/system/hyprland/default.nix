@@ -64,8 +64,8 @@ in {
 
       monitor = [
         # ", preferred, auto, 1"
-        "DP-4, 3840x2160@239.99, 0x0, 1, vrr, 1"
-        "DP-6, highrr, -2160x-1300, 1, transform, 3, vrr, 1"
+        "DP-4, 3840x2160@239.99, 0x0, 1, bitdepth, 10"
+        "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10"
       ];
 
       # assign workspaces to certain monitors
