@@ -5,8 +5,22 @@
     protontricks
   ];
 
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
+    programs.steam = {
+      enable = true;
+      gamescopeSession = {
+        enable = true;
+        args = [ "--adaptive-sync" "--hdr-enabled" "--steam" "--rt" ];
+        env = {
+          WLR_RENDERER = "vulkan";
+          DXVK_HDR = "1";
+          ENABLE_GAMESCOPE_WSI = "1";
+          WINE_FULLSCREEN_FSR = "1";
+        };
+        steamArgs = [ "-tenfoot" "-pipewire-dmabuf" ];
+      };
+    };
+  # programs.steam.enable = true;
+  # programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
   # for starCitizen
   boot.kernel.sysctl = {
