@@ -6,6 +6,15 @@
           id = 0;
           name = "default";
           isDefault = true;
+
+          extensions.packages = with pkgs.inputs.firefox-addons; [
+            ublock-origin
+            vimium
+            darkreader
+            protonpass
+          ];
+          bookmarks = {};
+
           settings = {
             # "browser.startup.homepage" = "https://searx.aicampground.com";
             "browser.search.defaultenginename" = "Google";
@@ -107,16 +116,10 @@
               #   updateInterval = 24 * 60 * 60 * 1000; # every day
               #   definedAliases = [ "@searx" ];
               # };
-              "Bing".metaData.hidden = true;
+              bing.metaData.hidden = true;
               # "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
             };
           };
-          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-            ublock-origin
-            protonpass
-            darkreader
-            vimium
-          ];
         };
       };
   };
