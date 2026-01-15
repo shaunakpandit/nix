@@ -12,11 +12,13 @@
         args = [
           "--adaptive-sync"
           "--hdr-enabled"
+          "--hdr-debug-force-output"
           "--steam"
           "--rt"
+          "--fullscreen"
           # for HDR support
-          "--cm-fs-passthrough=0"
-          "--cm-auto-hdr=2"
+          # "--cm-fs-passthrough=0"
+          # "--cm-auto-hdr=2"
         ];
         env = {
           WLR_RENDERER = "vulkan";

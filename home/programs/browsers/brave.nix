@@ -3,6 +3,7 @@
     enable = true;
     commandLineArgs = [
       "--no-default-browser-check"
+      "--disable-features=WaylandWpColorManagerV1"
     ];
     extensions = [
       { id = "ddkjiahejlhfcafbddmgiahcphecmpfh"; } ## ublock 

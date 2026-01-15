@@ -62,11 +62,55 @@ in {
         "dbus-update-activation-environment --systemd --all &"
       ];
 
-      monitor = [
-        # ", preferred, auto, 1"
-        "DP-4, 3840x2160@239.99, 0x0, 1, bitdepth, 10"
-        "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10"
-      ];
+   monitorv2 = [
+      {
+        # DP-4 with HDR + your original mode/position/scale
+        output = "DP-4";
+        mode = "3840x2160@239.99";
+        position = "0x0";
+        scale = 1;
+
+        bitdepth = 10;
+        vrr = 0;
+
+        cm = "hdredid";
+        sdrbrightness = 1.2;
+        sdrsaturation = 1;
+        supports_wide_color = true;
+        supports_hdr = true;
+        sdr_min_luminance = 0.005;
+        sdr_max_luminance = 200;
+        min_luminance = 0.0;
+        max_luminance = 570;
+        max_avg_luminance = 275;
+      }
+
+      {
+        # DP-6, converted from your old line:
+        # "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10"
+        output = "DP-6";
+        mode = "highrr";
+        position = "-2160x-1300";
+        scale = 1;
+        transform = 3;
+        bitdepth = 10;
+      }
+    ];
+
+
+      # monitor = [
+      #   # ", preferred, auto, 1"
+      #   "DP-4, 3840x2160@239.99, 0x0, 1, bitdepth, 10"
+      #   "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10"
+      # ];
+
+      # src: https://www.reddit.com/r/hyprland/comments/1i8cqgt/games_lagging_only_when_moving_mouse/
+      # To fix micro stuttering in games
+      render = { 
+        direct_scanout = 1; 
+        cm_fs_passthrough = 1;
+        cm_auto_hdr = 2;
+      };
 
       # assign workspaces to certain monitors
       # ensures that navigating to a certain workspace opens it on the correct monitor
