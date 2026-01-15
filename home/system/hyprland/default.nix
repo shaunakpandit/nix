@@ -62,7 +62,7 @@ in {
         "dbus-update-activation-environment --systemd --all &"
       ];
 
-   monitorv2 = [
+      monitorv2 = [
       {
         # DP-4 with HDR + your original mode/position/scale
         output = "DP-4";
@@ -94,6 +94,19 @@ in {
         scale = 1;
         transform = 3;
         bitdepth = 10;
+
+        vrr = 0;
+
+        cm = "hdredid";
+        sdrbrightness = 1.2;
+        sdrsaturation = 1;
+        supports_wide_color = true;
+        supports_hdr = true;
+        sdr_min_luminance = 0.005;
+        sdr_max_luminance = 200;
+        min_luminance = 0.0;
+        max_luminance = 570;
+        max_avg_luminance = 275;
       }
     ];
 

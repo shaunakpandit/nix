@@ -8,7 +8,7 @@
         "$mod,RETURN, exec, uwsm app -- ${pkgs.ghostty}/bin/ghostty" # Ghostty (terminal)
         "$mod,E, exec,  uwsm app -- ${pkgs.thunar}/bin/thunar" # Thunar
         "$shiftMod,B, exec,  uwsm app -- ${pkgs.qutebrowser}/bin/qutebrowser" # Browser (Qute)
-        "$mod,B, exec,  uwsm app -- ${pkgs.brave}/bin/brave" # Browser (Brave)
+        "$mod,B, exec,  uwsm app -- ${pkgs.brave}/bin/brave --force-color-profile=HDR10" # Browser (Brave)
         "$mod,P, exec,  uwsm app -- ${pkgs.proton-pass}/bin/proton-pass" # Proton Pass
         "$mod,V, exec,  uwsm app -- ${pkgs.protonvpn-gui}/bin/protonvpn-app" # Proton VPN
         "$mod,A, exec,  uwsm app -- env WEBKIT_DISABLE_COMPOSITING_MODE=1 ${pkgs.proton-authenticator}/bin/proton-authenticator" # Proton Auth
@@ -28,7 +28,7 @@
 
           # Exec with rules https://wiki.hypr.land/Configuring/Dispatchers/#executing-with-rules
           # Tav
-          "$shiftMod, T, exec, [workspace special silent; float; size 585 1050;] ${pkgs.brave}/bin/brave --incognito --new-window http://192.168.4.28:8000/"
+          "$shiftMod, T, exec, [workspace special silent; float; size 585 1050;] ${pkgs.brave}/bin/brave --incognito --new-window --force-color-profile=HDR10 http://192.168.4.28:8000/"
           # "$shiftMod, M, exec, [workspace special silent; float; size 1200 1550;] ${pkgs.ghostty}/bin/ghostty -e btop"
           "$shiftMod, M, exec, [workspace 2] ${pkgs.ghostty}/bin/ghostty -e btop"
           # "$shiftMod, n, exec, [workspace 2 silent;] ${pkgs.ghostty}/bin/ghostty -e zsh -lc 'source ~/.zshrc && cd ~/norgotes/ && nvim --cmd 'call feedkeys(',jj,im')''"

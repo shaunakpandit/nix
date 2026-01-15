@@ -5,7 +5,7 @@
       "--no-default-browser-check"
       "--disable-features=WaylandWpColorManagerV1"
       "--enable-features=UseMonitorColorSpace,CanvasOopRasterization"
-      "--force-color-profile=srgb"
+      "--force-color-profile=HDR10"
     ];
     extensions = [
       { id = "ddkjiahejlhfcafbddmgiahcphecmpfh"; } ## ublock 
