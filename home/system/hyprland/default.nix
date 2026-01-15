@@ -158,7 +158,7 @@ in {
         "WLR_RENDERER,vulkan"
         "WLR_NO_HARDWARE_CURSORS,1"
          # TODO: test if I can add ,x11 , windows 
-        "SDL_VIDEODRIVER,wayland"
+        "SDL_VIDEODRIVER,wayland, x11, windows"
         "CLUTTER_BACKEND,wayland"
       ];
 
