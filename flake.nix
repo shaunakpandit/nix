@@ -35,6 +35,7 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nix-citizen.url = "github:LovingMelody/nix-citizen";
     # Optional - updates underlying without waiting for nix-citizen to update
     nix-gaming.url = "github:fufexan/nix-gaming";

@@ -1,24 +1,29 @@
-{pkgs, lib, ...}: {
+{pkgs, lib, inputs, ...}: {
+  stylix.targets.firefox = {
+    enable = true;
+    profileNames = ["ploopy"];
+  };
+  
   programs.firefox = {
       enable = true;
       profiles = {
-        default = {
+        ploopy = {
           id = 0;
           name = "default";
           isDefault = true;
 
-          extensions.packages = with pkgs.inputs.firefox-addons; [
+          extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
             ublock-origin
             vimium
             darkreader
-            protonpass
+            proton-pass
           ];
           bookmarks = {};
 
           settings = {
             # "browser.startup.homepage" = "https://searx.aicampground.com";
-            "browser.search.defaultenginename" = "Google";
-            "browser.search.order.1" = "Google";
+            "browser.search.defaultenginename" = "google";
+            "browser.search.order.1" = "google";
             # Disable irritating first-run stuff
             "browser.disableResetPrompt" = true;
             "browser.download.panel.shown" = true;
@@ -90,8 +95,8 @@
           };
           search = {
             force = true;
-            default = "Google";
-            order = [ "Google" ];
+            default = "google";
+            order = [ "google" ];
             engines = {
               "Nix Packages" = {
                 urls = [{
