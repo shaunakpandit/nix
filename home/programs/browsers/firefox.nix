@@ -1,7 +1,7 @@
 {pkgs, lib, inputs, ...}: {
   stylix.targets.firefox = {
     enable = true;
-    profileNames = ["ploopy"];
+    # profileNames = ["ploopy"];
   };
   
   programs.firefox = {
@@ -43,7 +43,6 @@
             "browser.download.useDownloadDir" = false;
 
             # Disable crappy home activity stream page
-            "browser.newtabpage.activity-stream.feeds.topsites" = false;
             "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
             "browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts" = false;
             "browser.newtabpage.blocked" = lib.genAttrs [
