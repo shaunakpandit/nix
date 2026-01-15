@@ -21,6 +21,8 @@
           bookmarks = {};
 
           settings = {
+            # for stylix to work
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
             # "browser.startup.homepage" = "https://searx.aicampground.com";
             "browser.search.defaultenginename" = "google";
             "browser.search.order.1" = "google";

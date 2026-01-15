@@ -4,6 +4,8 @@
     commandLineArgs = [
       "--no-default-browser-check"
       "--disable-features=WaylandWpColorManagerV1"
+      "--enable-features=UseMonitorColorSpace,CanvasOopRasterization"
+      "--force-color-profile=srgb"
     ];
     extensions = [
       { id = "ddkjiahejlhfcafbddmgiahcphecmpfh"; } ## ublock 
