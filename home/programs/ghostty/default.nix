@@ -10,7 +10,7 @@
     enable = true;
     settings = {
       theme = "darkmetalEmperor.conf";
-      font-size = 18;
+      font-size = 17;
       font-family = "Hack Nerd Font";
       font-thicken = true;
       window-padding-x = 12;

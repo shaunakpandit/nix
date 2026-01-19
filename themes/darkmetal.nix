@@ -3,11 +3,11 @@
     type = lib.types.attrs;
     default = {
       rounding = 0;
-      gaps-in = 5;
+      gapj-in = 5;
       gaps-out = 5 * 2;
       active-opacity = 0.94;
       inactive-opacity = 0.88;
-      blur = true;
+      blur = false;
       border-size = 2;
       animation-speed = "fast"; # "fast" | "medium" | "slow"
       fetch = "nerdfetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
@@ -61,10 +61,10 @@
         name = "Noto Color Emoji";
       };
       sizes = {
-        applications = 18;
-        desktop = 18;
-        popups = 18;
-        terminal = 18;
+        applications = 17;
+        desktop = 17;
+        popups = 17;
+        terminal = 17;
       };
     };
 
