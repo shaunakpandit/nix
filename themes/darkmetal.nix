@@ -3,7 +3,7 @@
     type = lib.types.attrs;
     default = {
       rounding = 0;
-      gapj-in = 5;
+      gaps-in = 5;
       gaps-out = 5 * 2;
       active-opacity = 0.94;
       inactive-opacity = 0.88;
