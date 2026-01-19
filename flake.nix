@@ -74,6 +74,7 @@
                   enable = true;
                   preCommands = ''
                     unset SDL_VIDEODRIVER
+                    export DXVK_HDR=1
                   '';
                 };
               }
