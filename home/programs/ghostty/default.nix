@@ -2,14 +2,14 @@
   # Ensure alacritty package installed
   home.packages = with pkgs; [ ghostty ];
 
-  home.file.".config/ghostty/themes/blackmetalImpaled.conf".source =
-    ./themes/blackmetalImpaled.conf;
+  home.file.".config/ghostty/themes/blackmetalEmperor.conf".source =
+    ./themes/blackmetalEmperor.conf;
 
   # Install alacritty via home-manager module
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "blackmetalImpaled.conf";
+      theme = "blackmetalEmperor.conf";
       font-size = 15;
       font-family = "Hack Nerd Font";
       font-thicken = true;

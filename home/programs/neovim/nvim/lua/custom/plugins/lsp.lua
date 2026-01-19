@@ -251,6 +251,15 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        -- Nix LSP
+        'nixfmt',
+        'nil_ls',
+        -- Go tooling
+        'gopls',
+        'gofumpt',
+        'goimports',
+        -- Markdown styling
+        'markdown_oxide'
       })
       --TODO: fix this crap. its just to get lua working
       local ensure = vim.tbl_keys {}
