@@ -1,10 +1,6 @@
 # Hyprland is a dynamic tiling Wayland compositor that is highly customizable and performant.
-{
-  pkgs,
-  config,
-  lib,
-  ...
-}: let
+{ pkgs, config, lib, ... }:
+let
   border-size = config.theme.border-size;
   gaps-in = config.theme.gaps-in;
   gaps-out = config.theme.gaps-out;
@@ -15,11 +11,7 @@
   keyboardLayout = config.var.keyboardLayout;
   background = "rgba(" + config.lib.stylix.colors.base00 + "77)";
 in {
-  imports = [
-    ./animations.nix
-    ./bindings.nix
-    ./polkitagent.nix
-  ];
+  imports = [ ./animations.nix ./bindings.nix ./polkitagent.nix ];
 
   home.packages = with pkgs; [
     qt5.qtwayland
@@ -58,58 +50,55 @@ in {
     portalPackage = null;
 
     settings = {
-      exec-once = [
-        "dbus-update-activation-environment --systemd --all &"
-      ];
+      exec-once = [ "dbus-update-activation-environment --systemd --all &" ];
 
       monitorv2 = [
-      {
-        # DP-4 with HDR + your original mode/position/scale
-        output = "DP-4";
-        mode = "3840x2160@239.99";
-        position = "0x0";
-        scale = 1;
+        {
+          # DP-4 with HDR + your original mode/position/scale
+          output = "DP-4";
+          mode = "3840x2160@239.99";
+          position = "0x0";
+          scale = 1;
 
-        bitdepth = 10;
-        vrr = 0;
+          bitdepth = 10;
+          vrr = 0;
 
-        cm = "hdredid";
-        sdrbrightness = 1.2;
-        sdrsaturation = 1;
-        supports_wide_color = true;
-        supports_hdr = true;
-        sdr_min_luminance = 0.005;
-        sdr_max_luminance = 200;
-        min_luminance = 0.0;
-        max_luminance = 570;
-        max_avg_luminance = 275;
-      }
+          cm = "hdredid";
+          sdrbrightness = 1.2;
+          sdrsaturation = 1;
+          supports_wide_color = true;
+          supports_hdr = true;
+          sdr_min_luminance = 5.0e-3;
+          sdr_max_luminance = 200;
+          min_luminance = 0.0;
+          max_luminance = 570;
+          max_avg_luminance = 275;
+        }
 
-      {
-        # DP-6, converted from your old line:
-        # "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10"
-        output = "DP-6";
-        mode = "highrr";
-        position = "-2160x-1300";
-        scale = 1;
-        transform = 3;
-        bitdepth = 10;
+        {
+          # DP-6, converted from your old line:
+          # "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10"
+          output = "DP-6";
+          mode = "highrr";
+          position = "-2160x-1300";
+          scale = 1;
+          transform = 3;
+          bitdepth = 10;
 
-        vrr = 0;
+          vrr = 0;
 
-        cm = "hdredid";
-        sdrbrightness = 1.2;
-        sdrsaturation = 1;
-        supports_wide_color = true;
-        supports_hdr = true;
-        sdr_min_luminance = 0.005;
-        sdr_max_luminance = 200;
-        min_luminance = 0.0;
-        max_luminance = 570;
-        max_avg_luminance = 275;
-      }
-    ];
-
+          cm = "hdredid";
+          sdrbrightness = 1.2;
+          sdrsaturation = 1;
+          supports_wide_color = true;
+          supports_hdr = true;
+          sdr_min_luminance = 5.0e-3;
+          sdr_max_luminance = 200;
+          min_luminance = 0.0;
+          max_luminance = 570;
+          max_avg_luminance = 275;
+        }
+      ];
 
       # monitor = [
       #   # ", preferred, auto, 1"
@@ -119,15 +108,15 @@ in {
 
       # src: https://www.reddit.com/r/hyprland/comments/1i8cqgt/games_lagging_only_when_moving_mouse/
       # To fix micro stuttering in games
-      render = { 
-        direct_scanout = 1; 
+      render = {
+        direct_scanout = 1;
         cm_fs_passthrough = 1;
         cm_auto_hdr = 2;
       };
 
       # assign workspaces to certain monitors
       # ensures that navigating to a certain workspace opens it on the correct monitor
-      workspace = [ 
+      workspace = [
         "1, monitor:DP-4"
         "3, monitor:DP-4"
         "4, monitor:DP-4"
@@ -185,10 +174,7 @@ in {
           render_power = 3;
         };
         blur = {
-          enabled =
-            if blur
-            then "true"
-            else "false";
+          enabled = if blur then "true" else "false";
           size = 18;
         };
       };
@@ -211,6 +197,13 @@ in {
         "match:class protonvpn-app, size 500 400"
 
         # MY WINDOW RULES
+
+        # make Firefox/Zen PiP window floating and sticky
+        "float on, match:title ^(Picture-in-Picture)$"
+        "pin on, match:title ^(Picture-in-Picture)$"
+
+        # disable opacity in youtube
+        "opacity 1.0 1.0 override, match:title .*- YouTube.*"
         "opacity 1.0 1.0 override, match:class ^(net-runelite-client-RuneLite)$"
         "float on, match:class ^(net-runelite-client-RuneLite)$"
         "size 1200 850, match:class ^(net-runelite-client-RuneLite)$"
