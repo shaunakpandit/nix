@@ -201,6 +201,12 @@ in {
         # make Firefox/Zen PiP window floating and sticky
         "float on, match:title ^(Picture-in-Picture)$"
         "pin on, match:title ^(Picture-in-Picture)$"
+        "opacity 1.0 1.0 override, match:title ^(Picture-in-Picture)$"
+
+        # make Brave PiP window floating and sticky
+        "float on, match:title ^(Picture in picture)$"
+        "pin on, match:title ^(Picture in picture)$"
+        "opacity 1.0 1.0 override, match:title ^(Picture in picture)$"
 
         # disable opacity in youtube
         "opacity 1.0 1.0 override, match:title .*- YouTube.*"
