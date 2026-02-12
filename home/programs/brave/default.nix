@@ -44,7 +44,7 @@
         "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # privacy badger
         "ghmbeldphafepmbegfdlkpapadhbakde" # proton pass
         "mnjggcdmjocbbbhaepdhchncahnbgone" # youtube blocker
-        "mmjbdbjnoablegbkcklggeknkfcjkjia" # custom new tab page
+        # "mmjbdbjnoablegbkcklggeknkfcjkjia" # custom new tab page
       ];
     in
       map (id: {inherit id;}) ids;
