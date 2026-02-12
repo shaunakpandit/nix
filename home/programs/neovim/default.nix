@@ -18,6 +18,13 @@
       imagemagick
       lua-language-server
       stylua
+      gofumpt
+      goimports
+      gopls
+      markdown-oxide
+      nil
+      nixfmt
+      nixpkgs-fmt
       # pkgs.lua-language-server
       # pkgs.stylua 
     ];
