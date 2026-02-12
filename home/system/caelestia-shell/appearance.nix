@@ -29,8 +29,8 @@ in {
       enabled = true;
       maxToasts = 4;
       toasts = {
-        audioInputChanged = true;
-        audioOutputChanged = true;
+        audioInputChanged = false;
+        audioOutputChanged = false;
         capsLockChanged = false;
         chargingChanged = true;
         configLoaded = false;
@@ -41,6 +41,7 @@ in {
         kbLayoutChanged = false;
       };
     };
+    dashboard.showOnHover = false;
     border = {
       inherit rounding;
       thickness = 8;

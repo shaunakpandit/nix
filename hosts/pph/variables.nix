@@ -5,12 +5,12 @@
 }: {
   imports = [
     # Choose your theme here:
-    ../../themes/zen.nix
+    ../../themes/rose-pine.nix
   ];
 
   config.var = {
-    hostname = "nixy";
-    username = "hadi";
+    hostname = "pph";
+    username = "hadrien";
     configDirectory =
       "/home/"
       + config.var.username
@@ -24,8 +24,8 @@
     extraLocale = "fr_FR.UTF-8";
 
     git = {
-      username = "Hadi";
-      email = "112569860+anotherhadi@users.noreply.github.com";
+      username = "pph";
+      email = "pph@pph.pph";
     };
 
     autoUpgrade = false;

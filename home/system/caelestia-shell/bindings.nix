@@ -19,7 +19,6 @@
       # Misc
       "$mod, Z, global, caelestia:lock"
       "$mod, N, exec, caelestia shell drawers toggle sidebar"
-
       # Utilities
       "$mod+Shift, SPACE, exec, caelestia shell gameMode toggle" # Toggle Focus/Game mode
       "$mod+Shift+Alt, S, global, caelestia:screenshotFreeze" # Capture region (freeze)
