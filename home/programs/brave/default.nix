@@ -101,6 +101,7 @@
   # - Enable Reader Mode
   # - GPU Rasterization: Enabled
   # - Override software rendering list: Enabled
+  # - Force color profile: HDR10
   #
   # Privacy settings (brave://settings/privacy):
   # - Block trackers & ads: Aggressive

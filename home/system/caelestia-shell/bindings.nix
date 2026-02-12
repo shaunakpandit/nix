@@ -28,6 +28,10 @@
       "$mod+Shift+Alt, R, exec, caelestia record -r" # Record region
 
       "$mod+Shift, E, exec, pkill fuzzel || caelestia emoji -p"
+
+      "$mod, O, global, caelestia:mediaToggle"
+      "$mod, P, global, caelestia:mediaNext"
+      "$mod, I, global, caelestia:mediaPrev"
     ];
     bindl = [
       # Brightness
@@ -43,9 +47,6 @@
       ", XF86AudioPrev, global, caelestia:mediaPrev"
       ", XF86AudioStop, global, caelestia:mediaStop"
 
-      "$mod, O, global, caelestia:mediaToggle"
-      "$mod, P, global, caelestia:mediaNext"
-      "$mod, I, global, caelestia:mediaPrev"
 
       # Sound
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
