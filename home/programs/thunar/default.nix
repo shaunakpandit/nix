@@ -48,10 +48,6 @@ in {
     QT_STYLE_OVERRIDE = lib.mkForce "Fusion";
   };
 
-  # bookmarks for the side pane
-  gtk.gtk3.bookmarks = [
-  ];
-
   home.file.".config/xarchiver/xarchiverrc".text = ''
     [xarchiver]
     preferred_format=0
