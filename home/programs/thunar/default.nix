@@ -32,10 +32,11 @@ in {
 
     # bookmarks for the side pane
     gtk3.bookmarks = [
-      "file:///home/${user}/Downloads Downloads"
-      "file:///home/${user}/Pictures Pictures"
-      "file:///home/${user}/.config/nixos NixOS"
-      "file:///home/${user}/dev Development"
+        "file:///home/${user}/dev Development"
+        "file:///home/${user}/.config/nixos NixOS"
+        "file:///home/${user}/Documents/Books Books"
+        "file:///home/${user}/Pictures Pics"
+        "file:///home/${user}/Downloads Downloads"
     ];
   };
 
@@ -49,11 +50,6 @@ in {
 
   # bookmarks for the side pane
   gtk.gtk3.bookmarks = [
-    "file:///home/${user}/dev Development"
-    "file:///home/${user}/.config/nixos NixOS"
-    "file:///home/${user}/Documents/Books Books"
-    "file:///home/${user}/Pictures Pics"
-    "file:///home/${user}/Downloads Downloads"
   ];
 
   home.file.".config/xarchiver/xarchiverrc".text = ''

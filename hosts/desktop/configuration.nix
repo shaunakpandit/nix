@@ -11,7 +11,7 @@
     ../../nixos/sddm.nix
     ../../nixos/users.nix
     ../../nixos/utils.nix
-    ../../nixos/tailscale.nix
+    # ../../nixos/tailscale.nix
     ../../nixos/hyprland.nix
     ../../nixos/docker.nix
     ../../nixos/games.nix
