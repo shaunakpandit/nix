@@ -2,6 +2,7 @@
   programs.brave = {
     enable = true;
     commandLineArgs = [
+      "--no-default-browser-check"
       # Wayland Native
       "--enable-features=UseOzonePlatform"
       "--ozone-platform=wayland"
@@ -17,6 +18,7 @@
       "--enable-features=VaapiVideoEncoder"
       "--enable-features=CanvasOopRasterization"
       "--disable-features=UseChromeOSDirectVideoDecoder"
+      "--enable-features=UseMonitorColorSpace"
 
       # Privacy & Security
       "--disable-features=MediaRouter" # Disable Chromecast
@@ -32,6 +34,7 @@
       "--force-dark-mode" # Match Stylix theme
       "--enable-features=WebUIDarkMode"
       "--no-default-browser-check"
+      "--force-color-profile=HDR10"
     ];
     extensions = let
       ids = [
@@ -40,6 +43,7 @@
         "eimadpbcbfnmbkopoojfekhnkhdbieeh" # dark reader
         "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # privacy badger
         "ghmbeldphafepmbegfdlkpapadhbakde" # proton pass
+        "mnjggcdmjocbbbhaepdhchncahnbgone" # youtube blocker
         "mmjbdbjnoablegbkcklggeknkfcjkjia" # custom new tab page
       ];
     in
