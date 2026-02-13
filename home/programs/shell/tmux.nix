@@ -1,4 +1,5 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+{
   programs.tmux = {
     enable = true;
     # use the stock tmux from nixpkgs
@@ -139,6 +140,9 @@
         # Ricing
         ##############################################################################
         set -g default-terminal "tmux-256color"
+
+        set -ogq @thm_cursor "#5DCD9A"
+        set -ogq @thm_cursor_text "#191d23"
 
         set -g window-status-format "#I#{?#{!=:#{window_name},Window},: #W,}"
         set -g window-status-style "fg=#{@thm_blue_bright}, bg=default"
