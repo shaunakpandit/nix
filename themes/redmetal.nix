@@ -35,26 +35,26 @@
       base05 = "#c1c1c1";
       base06 = "#999999";
       base07 = "#c1c1c1";
-      base08 = "#5f8787";
+      base08 = "#974b46";
       base09 = "#aaaaaa";
-      base0A = "#556677";
-      base0B = "#7799bb";
+      base0A = "#79241f";
+      base0B = "#d0dfee";
       base0C = "#aaaaaa";
       base0D = "#888888";
-      base0E = "#b87ab8";
+      base0E = "#999999";
       base0F = "#444444";
     };
 
     cursor = {
-      name = "phinger-cursors-light";
-      package = pkgs.phinger-cursors;
-      size = 32;
+      name = "BreezeX-RosePine-Linux";
+      package = pkgs.rose-pine-cursor;
+      size = 36;
     };
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.hack;
-        name = "Hack Nerd Font";
+        package = pkgs.maple-mono.NF;
+        name = "Maple Mono NF";
       };
       sansSerif = {
         package = pkgs.source-sans-pro;

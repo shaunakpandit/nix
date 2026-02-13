@@ -1,17 +1,23 @@
-{ pkgs, userConfig, lib, theme, ... }: {
+{
+  pkgs,
+  userConfig,
+  lib,
+  theme,
+  ...
+}:
+{
   # Ensure alacritty package installed
   home.packages = with pkgs; [ ghostty ];
 
-  home.file.".config/ghostty/themes/darkmetalEmperor.conf".source =
-    ./themes/darkmetalEmperor.conf;
+  home.file.".config/ghostty/themes/redmetal.conf".source = ./themes/redmetal.conf;
 
   # Install alacritty via home-manager module
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "darkmetalEmperor.conf";
+      theme = "redmetal.conf";
       font-size = 17;
-      font-family = "Hack Nerd Font";
+      font-family = "Maple Mono NF";
       font-thicken = true;
       window-padding-x = 12;
       window-padding-y = 12;

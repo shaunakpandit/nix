@@ -5,7 +5,7 @@ return
   priority = 1000,
   config = function()
     require("black-metal").setup({
-        theme = 'emperor',
+        theme = 'venom',
         variant = 'dark',
     })
     require("black-metal").load()
