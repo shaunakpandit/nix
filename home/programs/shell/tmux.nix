@@ -143,6 +143,8 @@
 
         set -ogq @thm_cursor "#5DCD9A"
         set -ogq @thm_cursor_text "#191d23"
+        # set -ogq @thm_bg "#000000"
+        # set -ogq @thm_fg "#000000"
 
         set -g window-status-format "#I#{?#{!=:#{window_name},Window},: #W,}"
         set -g window-status-style "fg=#{@thm_blue_bright}, bg=default"

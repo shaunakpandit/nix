@@ -17,7 +17,7 @@
     settings = {
       theme = "redmetal.conf";
       font-size = 17;
-      font-family = "Maple Mono NF";
+      font-family = "Hack Nerd Font";
       font-thicken = true;
       window-padding-x = 12;
       window-padding-y = 12;
