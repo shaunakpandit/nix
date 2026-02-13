@@ -1,14 +1,14 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   imports = [
     # Choose your theme here:
-    ../../themes/darkmetal.nix
+    ../../themes/redmetal.nix
   ];
 
   config.var = {
     hostname = "ploopy";
     username = "shaunak";
-    configDirectory = "/home/" + config.var.username
-      + "/.config/nixos"; # The path of the nixos configuration directory
+    configDirectory = "/home/" + config.var.username + "/.config/nixos"; # The path of the nixos configuration directory
 
     keyboardLayout = "us";
 
