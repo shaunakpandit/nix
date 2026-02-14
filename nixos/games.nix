@@ -1,36 +1,40 @@
-{ config, pkgs, ...} : {
+{ config, pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     # games
     mangohud
     protontricks
   ];
 
-    programs.steam = {
-      enable = true;
-      gamescopeSession = {
-        enable = true;
-        args = [
-          "--adaptive-sync"
-          "--hdr-enabled"
-          "--hdr-debug-force-output"
-          "--steam"
-          "--rt"
-          "--fullscreen"
-          # for HDR support
-          # "--cm-fs-passthrough=0"
-          # "--cm-auto-hdr=2"
-        ];
-        env = {
-          WLR_RENDERER = "vulkan";
-          DXVK_HDR = "1";
-          PROTON_ENABLE_HDR = "1";
-          ENABLE_HDR_WSI = "1";
-          ENABLE_GAMESCOPE_WSI = "1";
-          WINE_FULLSCREEN_FSR = "1";
-        };
-        steamArgs = [ "-tenfoot" "-pipewire-dmabuf" ];
+  programs.steam = {
+    enable = true;
+    gamescopeSession = {
+      enable = false;
+      args = [
+        "--adaptive-sync"
+        "--hdr-enabled"
+        "--hdr-debug-force-output"
+        "--steam"
+        "--rt"
+        "--fullscreen"
+        # for HDR support
+        # "--cm-fs-passthrough=0"
+        # "--cm-auto-hdr=2"
+      ];
+      env = {
+        WLR_RENDERER = "vulkan";
+        DXVK_HDR = "1";
+        PROTON_ENABLE_HDR = "1";
+        ENABLE_HDR_WSI = "1";
+        ENABLE_GAMESCOPE_WSI = "1";
+        WINE_FULLSCREEN_FSR = "1";
       };
+      steamArgs = [
+        "-tenfoot"
+        "-pipewire-dmabuf"
+      ];
     };
+  };
   # programs.steam.enable = true;
   # programs.steam.gamescopeSession.enable = true;
   # programs.gamescope.enable = true;
@@ -58,7 +62,10 @@
   users.users."${config.var.username}".extraGroups = [ "input" ];
 
   # 3) ensure USB-HID modules are in the initrd for hot-plug
-  boot.kernelModules = [ "usbhid" "hid-generic" ];
+  boot.kernelModules = [
+    "usbhid"
+    "hid-generic"
+  ];
 
   # enable udev rules for openRBG
   services.hardware.openrgb.enable = true;
