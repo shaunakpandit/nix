@@ -9,7 +9,7 @@
   programs.steam = {
     enable = true;
     gamescopeSession = {
-      enable = false;
+      enable = true;
       args = [
         "--adaptive-sync"
         "--hdr-enabled"
