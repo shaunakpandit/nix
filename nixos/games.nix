@@ -4,10 +4,20 @@
     # games
     mangohud
     protontricks
+
+    (writeShellScriptBin "steam2" ''
+
+      #!/usr/bin/env bash
+      export SDL_VIDEODRIVER=wayland,x11,windows
+
+      nohup steam "$@" >/dev/null 2>&1 &
+      disown
+    '')
   ];
 
   programs.steam = {
     enable = true;
+
     gamescopeSession = {
       enable = true;
       args = [
