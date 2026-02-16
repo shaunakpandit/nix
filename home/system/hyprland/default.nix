@@ -63,28 +63,28 @@ in
       exec-once = [ "dbus-update-activation-environment --systemd --all &" ];
 
       monitorv2 = [
-        {
-          # DP-4 with HDR + your original mode/position/scale
-          output = "DP-4";
-          mode = "3840x2160@239.99";
-          position = "0x0";
-          scale = 1;
-
-          bitdepth = 10;
-          vrr = 0;
-
-          cm = "hdredid";
-          sdrbrightness = 1.2;
-          sdrsaturation = 1;
-          supports_wide_color = 0;
-          supports_hdr = 0;
-          sdr_min_luminance = 5.0e-3;
-          sdr_max_luminance = 200;
-          min_luminance = 0.0;
-          max_luminance = 570;
-          max_avg_luminance = 275;
-        }
-
+        #   {
+        #     # DP-4 with HDR + your original mode/position/scale
+        #     output = "DP-4";
+        #     mode = "3840x2160@239.99";
+        #     position = "0x0";
+        #     scale = 1;
+        #
+        #     bitdepth = 10;
+        #     vrr = 0;
+        #
+        #     cm = "hdredid";
+        #     sdrbrightness = 1.2;
+        #     sdrsaturation = 1;
+        #     supports_wide_color = 0;
+        #     supports_hdr = 0;
+        #     sdr_min_luminance = 5.0e-3;
+        #     sdr_max_luminance = 200;
+        #     min_luminance = 0.0;
+        #     max_luminance = 570;
+        #     max_avg_luminance = 275;
+        #   }
+        #
         {
           # DP-6, converted from your old line:
           # "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10"
@@ -110,11 +110,11 @@ in
         }
       ];
 
-      # monitor = [
-      #   # ", preferred, auto, 1"
-      #   "DP-4, 3840x2160@239.99, 0x0, 1, bitdepth, 10, cm, wide"
-      #   "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10, cm, wide"
-      # ];
+      monitor = [
+        # ", preferred, auto, 1"
+        "DP-4, 3840x2160@239.99, 0x0, 1, bitdepth, 10, cm, wide"
+        # "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10, cm, wide"
+      ];
 
       # src: https://www.reddit.com/r/hyprland/comments/1i8cqgt/games_lagging_only_when_moving_mouse/
       # To fix micro stuttering in games
