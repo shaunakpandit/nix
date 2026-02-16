@@ -27,6 +27,9 @@
         "--steam"
         "--rt"
         "--fullscreen"
+        # for 4k
+        "--width=3840"
+        "--height=2160"
         # for HDR support
         # "--cm-fs-passthrough=0"
         # "--cm-auto-hdr=2"
