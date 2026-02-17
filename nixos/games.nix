@@ -24,18 +24,21 @@
       };
     };
 
+    ## old command for steam: gamescope -w 3840 -h 2160 -- %command%
     gamescopeSession = {
       enable = true;
+      # command
       args = [
+        # for 4k
+        "--nested-width 3840"
+        "--nested-height 2160"
+
         "--adaptive-sync"
         "--hdr-enabled"
         "--hdr-debug-force-output"
         "--steam"
         "--rt"
-        "--fullscreen"
-        # for 4k
-        "-w 3840"
-        "-h 2160"
+        "--f"
         # for HDR support
         # "--cm-fs-passthrough=0"
         # "--cm-auto-hdr=2"
