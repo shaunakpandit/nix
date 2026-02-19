@@ -46,20 +46,25 @@
     nixarr.url = "github:rasmus-kirk/nixarr";
   };
 
-  outputs = inputs @ {nixpkgs, ...}: {
-    nixosConfigurations = {
-      ploopy =
-        # CHANGEME: This should match the 'hostname' in your variables.nix file
-        nixpkgs.lib.nixosSystem {
-          modules = [
-            {
-              nixpkgs.overlays = [];
-              _module.args = {
-                inherit inputs;
-              };
-            }
-            inputs.home-manager.nixosModules.home-manager
-            inputs.stylix.nixosModules.stylix
+  # supports having a nvim submodule https://github.com/shaunakpandit/nvim
+  inputs.self.submodules = true;
+
+  outputs =
+    inputs@{ nixpkgs, ... }:
+    {
+      nixosConfigurations = {
+        ploopy =
+          # CHANGEME: This should match the 'hostname' in your variables.nix file
+          nixpkgs.lib.nixosSystem {
+            modules = [
+              {
+                nixpkgs.overlays = [ ];
+                _module.args = {
+                  inherit inputs;
+                };
+              }
+              inputs.home-manager.nixosModules.home-manager
+              inputs.stylix.nixosModules.stylix
 
               inputs.nix-citizen.nixosModules.StarCitizen
               {
@@ -79,36 +84,35 @@
                 };
               }
 
-            ./hosts/desktop/configuration.nix # CHANGEME: change the path to match your host folder
-          ];
-        };
+              ./hosts/desktop/configuration.nix # CHANGEME: change the path to match your host folder
+            ];
+          };
 
-      pph =
-        nixpkgs.lib.nixosSystem {
+        pph = nixpkgs.lib.nixosSystem {
           modules = [
             {
-              nixpkgs.overlays = [];
+              nixpkgs.overlays = [ ];
               _module.args = {
                 inherit inputs;
               };
             }
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
-            ./hosts/pph/configuration.nix 
+            ./hosts/pph/configuration.nix
           ];
         };
-      # Jack is my server
-      jack = nixpkgs.lib.nixosSystem {
-        modules = [
-          {_module.args = {inherit inputs;};}
-          inputs.home-manager.nixosModules.home-manager
-          inputs.stylix.nixosModules.stylix
-          inputs.sops-nix.nixosModules.sops
-          inputs.nixarr.nixosModules.default
-          inputs.eleakxir.nixosModules.eleakxir
-          ./hosts/server/configuration.nix
-        ];
+        # Jack is my server
+        jack = nixpkgs.lib.nixosSystem {
+          modules = [
+            { _module.args = { inherit inputs; }; }
+            inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
+            inputs.nixarr.nixosModules.default
+            inputs.eleakxir.nixosModules.eleakxir
+            ./hosts/server/configuration.nix
+          ];
+        };
       };
     };
-  };
 }
