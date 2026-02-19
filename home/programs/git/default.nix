@@ -7,9 +7,6 @@ in
 {
   programs.git = {
     enable = true;
-    config = {
-      url."git@github.com:".insteadOf = "https://github.com/";
-    };
     ignores = [
       ".cache/"
       ".DS_Store"
