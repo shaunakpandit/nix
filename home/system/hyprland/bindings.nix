@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     "$shiftMod" = "SUPER_SHIFT";
@@ -56,15 +57,27 @@
       "$shiftMod,h, movewindow, l" # move window left
       "$shiftMod,l, movewindow, r" # move window right
 
+      "$shiftMod, right, resizeactive, 10 0"
+      "$shiftMod, left, resizeactive, -10 0"
+      "$shiftMod, up, resizeactive, 0 -10"
+      "$shiftMod, down, resizeactive, 0 10"
+
       "$shiftMod,s, movetoworkspace, special" # move to a specialworkspace
       "$mod,s, togglespecialworkspace" # go to the special workspace
 
-    ] ++ (builtins.concatLists (builtins.genList (i:
-      let ws = i + 1;
-      in [
-        "$mod,code:1${toString i}, workspace, ${toString ws}"
-        "$mod SHIFT,code:1${toString i}, movetoworkspace, ${toString ws}"
-      ]) 9));
+    ]
+    ++ (builtins.concatLists (
+      builtins.genList (
+        i:
+        let
+          ws = i + 1;
+        in
+        [
+          "$mod,code:1${toString i}, workspace, ${toString ws}"
+          "$mod SHIFT,code:1${toString i}, movetoworkspace, ${toString ws}"
+        ]
+      ) 9
+    ));
 
     bindm = [
       "$mod,mouse:272, movewindow" # Move Window (mouse)
