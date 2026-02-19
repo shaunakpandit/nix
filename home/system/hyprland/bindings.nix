@@ -75,6 +75,7 @@
       ) 9
     ));
 
+    # meant to repeat when held
     bindr = [
       "$shiftMod, right, resizeactive, 10 0"
       "$shiftMod, left, resizeactive, -10 0"
