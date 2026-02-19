@@ -1,3 +1,4 @@
 [submodule "home/programs/neovim/nvim"]
 	path = home/programs/neovim/nvim
 	url = https://github.com/shaunakpandit/nvim.git
+	branch = nixos-config
