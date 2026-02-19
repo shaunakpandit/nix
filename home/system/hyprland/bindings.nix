@@ -4,6 +4,7 @@
     "$mod" = "SUPER";
     "$shiftMod" = "SUPER_SHIFT";
 
+    # see https://wiki.hypr.land/Configuring/Binds/
     bind = [
       "$mod,RETURN, exec, uwsm app -- ${pkgs.ghostty}/bin/ghostty" # Ghostty (terminal)
       "$mod,E, exec,  uwsm app -- ${pkgs.thunar}/bin/thunar" # Thunar
@@ -57,11 +58,6 @@
       "$shiftMod,h, movewindow, l" # move window left
       "$shiftMod,l, movewindow, r" # move window right
 
-      "$shiftMod, right, resizeactive, 10 0"
-      "$shiftMod, left, resizeactive, -10 0"
-      "$shiftMod, up, resizeactive, 0 -10"
-      "$shiftMod, down, resizeactive, 0 10"
-
       "$shiftMod,s, movetoworkspace, special" # move to a specialworkspace
       "$mod,s, togglespecialworkspace" # go to the special workspace
 
@@ -78,6 +74,13 @@
         ]
       ) 9
     ));
+
+    bindr = [
+      "$shiftMod, right, resizeactive, 10 0"
+      "$shiftMod, left, resizeactive, -10 0"
+      "$shiftMod, up, resizeactive, 0 -10"
+      "$shiftMod, down, resizeactive, 0 10"
+    ];
 
     bindm = [
       "$mod,mouse:272, movewindow" # Move Window (mouse)
