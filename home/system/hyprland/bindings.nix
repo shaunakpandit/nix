@@ -16,10 +16,10 @@
       "$mod,C, exec,  uwsm app -- ${pkgs.vivaldi}/bin/vivaldi --profile-directory=Default --app-id=ojibjkjikcpjonjjngfkegflhmffeemk" # Proton Calendar (PWA)
       "$mod,I, exec,  uwsm app -- ${pkgs.vivaldi}/bin/vivaldi --profile-directory=Default --app-id=lcfjlhjhpmdjimnbkdfjnkojodddgfmd" # Proton Lumo (PWA)
 
-      "$shiftMod,up, focusmonitor, -1" # Focus previous monitor
-      "$shiftMod,down, focusmonitor, 1" # Focus next monitor
-      "$shiftMod,left, layoutmsg, addmaster" # Add to master
-      "$shiftMod,right, layoutmsg, removemaster" # Remove from master
+      # "$shiftMod,up, focusmonitor, -1" # Focus previous monitor
+      # "$shiftMod,down, focusmonitor, 1" # Focus next monitor
+      # "$shiftMod,left, layoutmsg, addmaster" # Add to master
+      # "$shiftMod,right, layoutmsg, removemaster" # Remove from master
 
       # media controls
       # "$mod,I, exec, ${pkgs.playerctl}/bin/playerctl previous" # play previous
