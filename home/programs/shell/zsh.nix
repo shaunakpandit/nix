@@ -4,13 +4,20 @@
   lib,
   config,
   ...
-}: let
+}:
+let
   fetch = config.theme.fetch; # neofetch, nerdfetch, pfetch
-in {
-  home.packages = with pkgs; [bat ripgrep tldr witr];
+in
+{
+  home.packages = with pkgs; [
+    bat
+    ripgrep
+    tldr
+    witr
+  ];
 
   # Add go binaries to the PATH
-  home.sessionPath = ["$HOME/go/bin"];
+  home.sessionPath = [ "$HOME/go/bin" ];
 
   programs.zsh = {
     enable = true;
@@ -18,7 +25,14 @@ in {
     autosuggestion.enable = true;
     syntaxHighlighting = {
       enable = true;
-      highlighters = ["main" "brackets" "pattern" "regexp" "root" "line"];
+      highlighters = [
+        "main"
+        "brackets"
+        "pattern"
+        "regexp"
+        "root"
+        "line"
+      ];
     };
     historySubstringSearch.enable = true;
 
@@ -28,10 +42,8 @@ in {
       size = 10000;
     };
 
-    profileExtra = lib.optionalString (config.home.sessionPath != []) ''
-      export PATH="$PATH''${PATH:+:}${
-        lib.concatStringsSep ":" config.home.sessionPath
-      }"
+    profileExtra = lib.optionalString (config.home.sessionPath != [ ]) ''
+      export PATH="$PATH''${PATH:+:}${lib.concatStringsSep ":" config.home.sessionPath}"
     '';
 
     shellAliases = {
@@ -81,7 +93,8 @@ in {
       jj = "cd ~/norgotes/ && nvim --cmd 'call feedkeys(\",jj,im\")'";
 
       # config stuff
-      rb = "sudo nixos-rebuild switch --flake ~/.config/nixos#ploopy";
+      nvimup = "nixos && git submodule update --remote";
+      rb = "nvimup && sudo nixos-rebuild switch --flake ~/.config/nixos#ploopy";
       hr = "hyprctl reload";
       zsource = "source ~/.zshrc";
 
@@ -95,6 +108,7 @@ in {
 
       # ssh
       singapl = "ssh singapl@192.168.4.28";
+      thea = "ssh shaunakpandit@192.168.4.47";
     };
 
     initContent =
@@ -102,13 +116,14 @@ in {
       ''
         bindkey -e
         ${
-          if fetch == "neofetch"
-          then pkgs.neofetch + "/bin/neofetch"
-          else if fetch == "nerdfetch"
-          then "nerdfetch"
-          else if fetch == "pfetch"
-          then "echo; ${pkgs.pfetch}/bin/pfetch"
-          else ""
+          if fetch == "neofetch" then
+            pkgs.neofetch + "/bin/neofetch"
+          else if fetch == "nerdfetch" then
+            "nerdfetch"
+          else if fetch == "pfetch" then
+            "echo; ${pkgs.pfetch}/bin/pfetch"
+          else
+            ""
         }
 
         # =============================
