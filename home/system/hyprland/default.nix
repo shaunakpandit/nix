@@ -75,9 +75,9 @@ in
 
           cm = "hdredid";
           sdrbrightness = 1.2;
-          sdrsaturation = 1;
-          supports_wide_color = 0;
-          supports_hdr = 0;
+          sdrsaturation = .9;
+          supports_wide_color = 1;
+          supports_hdr = 1;
           sdr_min_luminance = 5.0e-3;
           sdr_max_luminance = 200;
           min_luminance = 0.0;
@@ -99,7 +99,7 @@ in
 
           cm = "hdredid";
           sdrbrightness = 1.2;
-          sdrsaturation = 1;
+          sdrsaturation = .9;
           supports_wide_color = 0;
           supports_hdr = 0;
           sdr_min_luminance = 5.0e-3;
