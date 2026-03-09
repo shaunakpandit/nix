@@ -221,9 +221,9 @@ in
 
         # disable opacity in youtube
         "opacity 1.0 1.0 override, match:title .*- YouTube.*"
-        "opacity 1.0 1.0 override, match:class ^(net-runelite-client-RuneLite)$"
-        "float on, match:class ^(net-runelite-client-RuneLite)$"
-        "size 1200 850, match:class ^(net-runelite-client-RuneLite)$"
+        "opacity 1.0 1.0 override, match:title ^RuneLite$"
+        "float on, match:title ^RuneLite$"
+        "size 1200 850, match:title ^RuneLite$"
 
         # add blur for ghostty
         "no_blur on, match:class ghostty"
