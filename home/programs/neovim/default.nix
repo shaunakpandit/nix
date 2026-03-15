@@ -48,7 +48,7 @@
   # lua config
   xdg.configFile = {
     "nvim" = {
-      source = ~/dev/dotfiles/nvim-12/.config/nvim;
+      source = ./nvim;
       recursive = true;
     };
   };

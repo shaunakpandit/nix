@@ -13,7 +13,7 @@
   # lua config
   xdg.configFile = {
     "tmux" = {
-      source = ~/dev/dotfiles/tmux/.config/tmux;
+      source = ./tmux;
       recursive = true;
     };
   };
