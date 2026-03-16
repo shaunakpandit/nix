@@ -30,4 +30,6 @@ opt.winborder = "single" -- Use rounded borders for windows
 opt.hlsearch = true -- Enable highlighting of search results
 vim.opt.clipboard = "unnamedplus" -- yank to system clipboard
 
+vim.g.pack_lockfile = vim.fn.stdpath("data") .. "/nvim-pack-lock.json" -- for nixos lock file editable
+
 vim.cmd.filetype("plugin indent on") -- Enable filetype detection, plugins, and indentation
