@@ -112,8 +112,8 @@ in
 
       monitor = [
         # ", preferred, auto, 1"
-        "DP-4, 3840x2160@239.99, 0x0, 1, bitdepth, 10, cm, wide"
-        "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10, cm, wide"
+        "DP-4, 3840x2160@239.99, 0x0, 1, bitdepth, 10, cm, auto"
+        "DP-6, highrr, -2160x-1300, 1, transform, 3, bitdepth, 10, cm, auto"
       ];
 
       # src: https://www.reddit.com/r/hyprland/comments/1i8cqgt/games_lagging_only_when_moving_mouse/
