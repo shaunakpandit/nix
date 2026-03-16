@@ -33,17 +33,12 @@
       # pkgs.lua-language-server
       # pkgs.stylua
     ];
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    # package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     defaultEditor = true;
     withNodeJs = true;
     withPython3 = true;
     withRuby = true;
   };
-
-  # for fff.nvim
-  environment.systemPackages = [
-    pkgs.rustup
-  ];
 
   # lua config
   xdg.configFile = {
