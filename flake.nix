@@ -44,6 +44,9 @@
     # Server
     eleakxir.url = "github:anotherhadi/eleakxir";
     nixarr.url = "github:rasmus-kirk/nixarr";
+
+    # nvim nightly
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   # supports having a nvim submodule https://github.com/shaunakpandit/nvim
@@ -51,6 +54,11 @@
 
   outputs =
     inputs@{ nixpkgs, ... }:
+    let
+      overlays = [
+        inputs.neovim-nightly-overlay.overlays.default
+      ];
+    in
     {
       nixosConfigurations = {
         ploopy =
@@ -58,7 +66,7 @@
           nixpkgs.lib.nixosSystem {
             modules = [
               {
-                nixpkgs.overlays = [ ];
+                nixpkgs.overlays = overlays;
                 _module.args = {
                   inherit inputs;
                 };

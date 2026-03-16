@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }:
+{
 
   xdg.desktopEntries.nvim = {
     name = "Neovim";
@@ -6,8 +7,15 @@
     exec = "ghostty -e nvim %F";
     icon = "nvim";
     terminal = false;
-    categories = [ "Utility" "TextEditor" ];
-    mimeType = [ "text/plain" "text/x-python" "text/x-tex" ];
+    categories = [
+      "Utility"
+      "TextEditor"
+    ];
+    mimeType = [
+      "text/plain"
+      "text/x-python"
+      "text/x-tex"
+    ];
   };
 
   # Neovim text editor configuration
@@ -23,16 +31,16 @@
       markdown-oxide
       nil
       # pkgs.lua-language-server
-      # pkgs.stylua 
+      # pkgs.stylua
     ];
-    package = pkgs.neovim-unwrapped;
+    # package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     defaultEditor = true;
     withNodeJs = true;
     withPython3 = true;
     withRuby = true;
   };
 
-  # lua config 
+  # lua config
   xdg.configFile = {
     "nvim" = {
       source = ./nvim;

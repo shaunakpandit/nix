@@ -1,4 +1,5 @@
-{config, pkgs, ...}: {
+{ config, pkgs, ... }:
+{
   imports = [
     # Mostly system related configuration
     ../../nixos/nvidia.nix # CHANGEME: Remove this line if you don't have an Nvidia GPU
@@ -23,6 +24,7 @@
 
   environment.systemPackages = [
     pkgs.gimp # photoshop software
+    pkgs.rustup # for fff.nvim
   ];
 
   home-manager.users."${config.var.username}" = import ./home.nix;

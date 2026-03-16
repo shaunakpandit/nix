@@ -9,13 +9,13 @@
   # Ensure alacritty package installed
   home.packages = with pkgs; [ ghostty ];
 
-  home.file.".config/ghostty/themes/redmetal.conf".source = ./themes/redmetal.conf;
+  home.file.".config/ghostty/themes/dmImmortal.conf".source = ./themes/dmImmortal.conf;
 
   # Install alacritty via home-manager module
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "redmetal.conf";
+      theme = "dmImmortal.conf";
       font-size = 17;
       font-family = "Hack Nerd Font";
       font-thicken = true;
