@@ -16,10 +16,16 @@ require("nvim-treesitter.configs").setup({
 		"lua",
 		"vim",
 		"markdown",
-        "nix"
+        "nix",
+		"markdown_inline",
+		"html",
+        "yaml",
 	},
 	auto_install = true,
 	highlight = {
 		enable = true,
 	},
+    indent = {
+        enable = true,
+    }
 })

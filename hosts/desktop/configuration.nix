@@ -25,6 +25,7 @@
   environment.systemPackages = [
     pkgs.gimp # photoshop software
     pkgs.rustup # for fff.nvim
+    pkgs.iwe # for iwe pkm system
   ];
 
   home-manager.users."${config.var.username}" = import ./home.nix;
