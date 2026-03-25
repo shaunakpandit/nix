@@ -35,6 +35,8 @@ keymap.set({ "n", "v", "x" }, "<leader>O", "<Cmd>restart<CR>", { desc = "Restart
 -- movement
 keymap.set("n", "gh", "0", { desc = "Jump: Start of line" })
 keymap.set("n", "gl", "$", { desc = "Jump: End of line" })
+keymap.set("n", "j", "gj", { desc = "move down a line" })
+keymap.set("n", "k", "gk", { desc = "move up a line" })
 
 -- norm
 keymap.set({ "n", "v", "x" }, "<leader>n", ":norm ", { desc = "ENTER NORM COMMAND." })

@@ -20,6 +20,7 @@ opt.number = true -- Show line numbers
 opt.relativenumber = true -- Show relative line numbers
 opt.numberwidth = 2 -- Width of the line number column
 opt.wrap = false -- Disable line wrapping
+opt.linebrak = true -- enable line break after full words
 opt.cursorline = true -- Highlight the current line
 opt.scrolloff = 8 -- Keep 8 lines above and below the cursor
 opt.inccommand = "nosplit" -- Shows the effects of a command incrementally in the buffer
