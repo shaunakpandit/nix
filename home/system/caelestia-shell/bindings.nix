@@ -22,7 +22,7 @@
       # Utilities
       "$mod+Shift, SPACE, exec, caelestia shell gameMode toggle" # Toggle Focus/Game mode
       "$mod+Shift+Alt, S, global, caelestia:screenshotFreeze" # Capture region (freeze)
-      "$mod+Shift, 4, global, caelestia:screenshot" # Capture region
+      "$mod+Shift, R, global, caelestia:screenshot" # Capture region
       "$mod+Alt, R, exec, caelestia record -s" # Record screen with sound
       "Ctrl+Alt, R, exec, caelestia record" # Record screen
       "$mod+Shift+Alt, R, exec, caelestia record -r" # Record region
@@ -46,7 +46,6 @@
       ", XF86AudioNext, global, caelestia:mediaNext"
       ", XF86AudioPrev, global, caelestia:mediaPrev"
       ", XF86AudioStop, global, caelestia:mediaStop"
-
 
       # Sound
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
