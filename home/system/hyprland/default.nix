@@ -225,6 +225,8 @@ in
         "float on, match:title ^RuneLite$"
         "size 1200 850, match:title ^RuneLite$"
 
+        "opacity 1.0 1.0 override, match:title ^Watch UFC.*"
+
         # add blur for ghostty
         "no_blur on, match:class ghostty"
       ];
