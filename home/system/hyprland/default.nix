@@ -221,9 +221,9 @@ in
 
         # disable opacity in youtube
         "opacity 1.0 1.0 override, match:title .*- YouTube.*"
-        "opacity 1.0 1.0 override, match:title ^RuneLite$"
-        "float on, match:title ^RuneLite$"
-        "size 1200 850, match:title ^RuneLite$"
+        "opacity 1.0 1.0 override, match:title ^RuneLite.*"
+        "float on, match:title ^RuneLite.*"
+        "size 1200 850, match:title ^RuneLite.*"
 
         "opacity 1.0 1.0 override, match:title ^Watch UFC.*"
 
