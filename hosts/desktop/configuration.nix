@@ -27,6 +27,7 @@
     pkgs.rustup # for fff.nvim
     pkgs.iwe # for iwe pkm system
     pkgs.tree-sitter # for nvim
+    pkgs.mysql84
   ];
 
   home-manager.users."${config.var.username}" = import ./home.nix;
