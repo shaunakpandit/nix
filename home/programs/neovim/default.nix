@@ -30,6 +30,7 @@
       gopls
       markdown-oxide
       nil
+      tree-sitter
       # pkgs.lua-language-server
       # pkgs.stylua
     ];

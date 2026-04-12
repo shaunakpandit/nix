@@ -12,7 +12,7 @@ require("mason-tool-installer").setup({
 		"dprint", -- formatter
 		"intelephense",
 		"phpstan", -- linter
-		-- "roslyn_ls",
+		-- "roslyn",
 		"css-lsp",
 		-- GO
 		"gopls",
@@ -28,10 +28,10 @@ require("mason-tool-installer").setup({
 		"bash-language-server",
 		"rust-analyzer",
 		"helm-ls",
-        -- nix
-        "nil",
-        "nixfmt",
-        "nixpkgs-fmt"
+		-- nix
+		"nil",
+		"nixfmt",
+		"nixpkgs-fmt",
 	},
 	auto_update = true,
 })

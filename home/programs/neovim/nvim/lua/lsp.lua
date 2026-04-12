@@ -9,6 +9,6 @@ vim.lsp.enable({
 	"helm_ls",
 	"roslyn_ls",
 	"cssls",
-    "nil_ls"
+	"nil_ls",
 })
 vim.diagnostic.config({ virtual_text = true })

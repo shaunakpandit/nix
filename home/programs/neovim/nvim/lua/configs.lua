@@ -20,7 +20,6 @@ opt.number = true -- Show line numbers
 opt.relativenumber = true -- Show relative line numbers
 opt.numberwidth = 2 -- Width of the line number column
 opt.wrap = false -- Disable line wrapping
-opt.linebreak = true -- enable line break after full words
 opt.cursorline = true -- Highlight the current line
 opt.scrolloff = 8 -- Keep 8 lines above and below the cursor
 opt.inccommand = "nosplit" -- Shows the effects of a command incrementally in the buffer
@@ -29,8 +28,8 @@ opt.undofile = true -- Enable persistent undo
 opt.completeopt = { "menuone", "preview", "noinsert" } -- Options for completion menu
 opt.winborder = "single" -- Use rounded borders for windows
 opt.hlsearch = true -- Enable highlighting of search results
-vim.opt.clipboard = "unnamedplus" -- yank to system clipboard
-
-vim.g.pack_lockfile = vim.fn.stdpath("data") .. "/nvim-pack-lock.json" -- for nixos lock file editable
+opt.clipboard = "unnamedplus" -- yank to system clipboard
+opt.updatetime = 100 -- faster highlight word on hover behavior
+opt.foldlevel = 99 -- unfold all
 
 vim.cmd.filetype("plugin indent on") -- Enable filetype detection, plugins, and indentation

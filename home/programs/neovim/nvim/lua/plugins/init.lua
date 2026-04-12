@@ -14,7 +14,9 @@ vim.pack.add({
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 	{ src = "https://github.com/windwp/nvim-autopairs" },
+	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
 })
+
 require("gitsigns").setup({ signcolumn = true })
 require("nvim-autopairs").setup()
 
@@ -27,9 +29,11 @@ require("plugins.mason")
 require("plugins.treesitter")
 require("plugins.blink")
 require("plugins.fff")
-require("plugins.dap")
+-- require("plugins.dap")
 require("plugins.flash")
 require("plugins.bufferline")
 require("plugins.yanky")
 require("plugins.conform")
-require("plugins.iwe")
+require("plugins.sql")
+-- require("plugins.dadgrip")
+-- require("plugins.iwe")
