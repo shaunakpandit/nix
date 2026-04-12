@@ -42,7 +42,6 @@
     nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
 
     # Server
-    eleakxir.url = "github:anotherhadi/eleakxir";
     nixarr.url = "github:rasmus-kirk/nixarr";
   };
 

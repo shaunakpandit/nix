@@ -32,4 +32,6 @@ opt.clipboard = "unnamedplus" -- yank to system clipboard
 opt.updatetime = 100 -- faster highlight word on hover behavior
 opt.foldlevel = 99 -- unfold all
 
+vim.g.pack_lockfile = vim.fn.stdpath("data") .. "/nvim-pack-lock.json" -- for nixos lock file editable
+
 vim.cmd.filetype("plugin indent on") -- Enable filetype detection, plugins, and indentation
