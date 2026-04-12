@@ -30,7 +30,6 @@
       gopls
       markdown-oxide
       nil
-      tree-sitter
       # pkgs.lua-language-server
       # pkgs.stylua
     ];
@@ -41,11 +40,11 @@
     withRuby = true;
   };
 
-  # lua config
-  xdg.configFile = {
-    "nvim" = {
-      source = ./nvim;
-      recursive = true;
-    };
-  };
+xdg.configFile."nvim" = {
+  source = builtins.filterSource
+    (path: type:
+      baseNameOf path != "nvim-pack-lock.json")
+    ./nvim;
+  recursive = true;
+};
 }
