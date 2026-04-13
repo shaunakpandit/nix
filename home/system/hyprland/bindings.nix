@@ -8,7 +8,7 @@
     bind = [
       "$mod,RETURN, exec, uwsm app -- ${pkgs.ghostty}/bin/ghostty" # Ghostty (terminal)
       "$mod,E, exec,  uwsm app -- ${pkgs.thunar}/bin/thunar" # Thunar
-      "$mod,k, exec,  uwsm app -- ${pkgs.qutebrowser}/bin/qutebrowser" # Browser (Qute)
+      "$mod,b, exec,  uwsm app -- ${pkgs.qutebrowser}/bin/qutebrowser" # Browser (Qute)
       "$shiftMod,B, exec,  uwsm app -- ${pkgs.brave}/bin/brave --force-color-profile=HDR10" # Browser (Brave)
       "$mod,P, exec,  uwsm app -- ${pkgs.proton-pass}/bin/proton-pass" # Proton Pass
       "$mod,V, exec,  uwsm app -- ${pkgs.protonvpn-gui}/bin/protonvpn-app" # Proton VPN

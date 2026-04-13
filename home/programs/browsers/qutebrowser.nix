@@ -57,9 +57,7 @@ let
 
     buildPhase = ''
       npm install
-      cp ${
-        pkgs.writeText "src/routes/config.json" settings
-      } src/routes/config.json
+      cp ${pkgs.writeText "src/routes/config.json" settings} src/routes/config.json
       npm run build
       mkdir $out
       mv build $out
@@ -70,7 +68,8 @@ let
       homepage = "https://github.com/anotherhadi/homepage";
     };
   };
-in {
+in
+{
   imports = [ ./ddgColorScheme.nix ];
 
   programs.qutebrowser = {
@@ -112,15 +111,17 @@ in {
       };
 
       colors = {
-        webpage.preferred_color_scheme =
-          "dark"; # Enable dark mode for websites that support it
+        webpage.preferred_color_scheme = "dark"; # Enable dark mode for websites that support it
       };
 
       statusbar.show = "in-mode";
 
       completion = {
         height = "30%";
-        open_categories = [ "history" "bookmarks" ];
+        open_categories = [
+          "history"
+          "bookmarks"
+        ];
         scrollbar = {
           padding = 0;
           width = 0;
@@ -144,11 +145,13 @@ in {
         remove_finished = 0;
       };
 
-      hints = { radius = 1; };
+      hints = {
+        radius = 1;
+      };
 
       scrolling = {
         bar = "never";
-        smooth = true;
+        # smooth = true;
       };
 
       tabs = {
@@ -174,10 +177,10 @@ in {
         " w" = "tab-close";
         "J" = "tab-prev";
         "K" = "tab-next";
-         # https://qutebrowser.org/doc/help/commands.html#cmd-set-text
-        "  " = "cmd-set-text -s :tab-select";
-        " sb" = "cmd-set-text -s :quickmark-load";
-        " /" = "search";
+        # https://qutebrowser.org/doc/help/commands.html#cmd-set-text
+        "ff" = "cmd-set-text -s :tab-select";
+        "fl" = "cmd-set-text -s :quickmark-load";
+        "fb" = "search";
         " bo" = "tab-only";
         " bd" = "tab-close";
 
