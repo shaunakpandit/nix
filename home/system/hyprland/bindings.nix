@@ -8,32 +8,21 @@
     bind = [
       "$mod,RETURN, exec, uwsm app -- ${pkgs.ghostty}/bin/ghostty" # Ghostty (terminal)
       "$mod,E, exec,  uwsm app -- ${pkgs.thunar}/bin/thunar" # Thunar
-      "$shiftMod,B, exec,  uwsm app -- ${pkgs.qutebrowser}/bin/qutebrowser" # Browser (Qute)
-      "$mod,B, exec,  uwsm app -- ${pkgs.brave}/bin/brave --force-color-profile=HDR10" # Browser (Brave)
+      "$mod,k, exec,  uwsm app -- ${pkgs.qutebrowser}/bin/qutebrowser" # Browser (Qute)
+      "$shiftMod,B, exec,  uwsm app -- ${pkgs.brave}/bin/brave --force-color-profile=HDR10" # Browser (Brave)
       "$mod,P, exec,  uwsm app -- ${pkgs.proton-pass}/bin/proton-pass" # Proton Pass
       "$mod,V, exec,  uwsm app -- ${pkgs.protonvpn-gui}/bin/protonvpn-app" # Proton VPN
-      "$mod,A, exec,  uwsm app -- env WEBKIT_DISABLE_COMPOSITING_MODE=1 ${pkgs.proton-authenticator}/bin/proton-authenticator" # Proton Auth
+      # "$mod,A, exec,  uwsm app -- env WEBKIT_DISABLE_COMPOSITING_MODE=1 ${pkgs.proton-authenticator}/bin/proton-authenticator" # Proton Auth
       "$mod,M, exec,  uwsm app -- ${pkgs.vivaldi}/bin/vivaldi --profile-directory=Default --app-id=jnpecgipniidlgicjocehkhajgdnjekh" # Proton Mail (PWA)
       "$mod,C, exec,  uwsm app -- ${pkgs.vivaldi}/bin/vivaldi --profile-directory=Default --app-id=ojibjkjikcpjonjjngfkegflhmffeemk" # Proton Calendar (PWA)
       "$mod,I, exec,  uwsm app -- ${pkgs.vivaldi}/bin/vivaldi --profile-directory=Default --app-id=lcfjlhjhpmdjimnbkdfjnkojodddgfmd" # Proton Lumo (PWA)
 
-      # "$shiftMod,up, focusmonitor, -1" # Focus previous monitor
-      # "$shiftMod,down, focusmonitor, 1" # Focus next monitor
-      # "$shiftMod,left, layoutmsg, addmaster" # Add to master
-      # "$shiftMod,right, layoutmsg, removemaster" # Remove from master
-
-      # media controls
-      # "$mod,I, exec, ${pkgs.playerctl}/bin/playerctl previous" # play previous
-      # "$mod,O, exec, ${pkgs.playerctl}/bin/playerctl play-pause" # toggle play/pause
-      # "$mod,P, exec, ${pkgs.playerctl}/bin/playerctl next" # play next
-
       # Exec with rules https://wiki.hypr.land/Configuring/Dispatchers/#executing-with-rules
       # Tav
       "$shiftMod, T, exec, [workspace special silent; float; size 585 1050;] ${pkgs.brave}/bin/brave --incognito --new-window --force-color-profile=HDR10 http://192.168.4.28:8000/"
-      # "$shiftMod, M, exec, [workspace special silent; float; size 1200 1550;] ${pkgs.ghostty}/bin/ghostty -e btop"
       "$shiftMod, M, exec, [workspace 2] ${pkgs.ghostty}/bin/ghostty -e btop"
-      # "$shiftMod, n, exec, [workspace 2 silent;] ${pkgs.ghostty}/bin/ghostty -e zsh -lc 'source ~/.zshrc && cd ~/norgotes/ && nvim --cmd 'call feedkeys(',jj,im')''"
-      "$shiftMod, n, exec, [workspace 2] ${pkgs.ghostty}/bin/ghostty -e sh -lc 'cd ~/norgotes && nvim --cmd \"call feedkeys(\\\",jj,im\\\")\"'"
+      "$shiftMod, n, exec, [workspace 2] ${pkgs.ghostty}/bin/ghostty -e sh -lc 'cd ~/pkm && nvim'"
+      "$mod,d, exec, ${pkgs.ghostty}/bin/ghostty -e nvim +DBUI"
 
       # webUI
       # "$mod, A, exec, [float; size 1152 1587; move 84 149] qutebrowser https://webui.jssp.io/"
