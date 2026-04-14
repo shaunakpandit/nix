@@ -178,9 +178,9 @@ in
         "J" = "tab-prev";
         "K" = "tab-next";
         # https://qutebrowser.org/doc/help/commands.html#cmd-set-text
-        "ff" = "cmd-set-text -s :tab-select";
-        "fl" = "cmd-set-text -s :quickmark-load";
-        "fb" = "search";
+        " ff" = "cmd-set-text -s :tab-select";
+        " m" = "cmd-set-text -s :quickmark-load";
+        "/" = "search";
         " bo" = "tab-only";
         " bd" = "tab-close";
 
