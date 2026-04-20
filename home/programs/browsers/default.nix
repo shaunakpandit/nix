@@ -3,6 +3,6 @@
   imports = [
     ./qutebrowser.nix
     ./librewolf.nix
-    ./firefox.nix
+    # ./firefox.nix
   ];
 }
