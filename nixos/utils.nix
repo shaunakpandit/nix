@@ -125,6 +125,7 @@ in
     btop-cuda
     unrar
     p7zip
+    dig
   ];
 
   xdg.portal = {
