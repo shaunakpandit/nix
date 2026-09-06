@@ -22,7 +22,7 @@
     ../../home/programs/tui/git/signing.nix # CHANGEME: Change the key or remove this file
     ../../home/programs/tui/nixy
     ../../home/programs/tui/nix-utils
-    ../../home/programs/tui/spotatui
+    ../../home/programs/tui/myx
     ../../home/programs/tui/elio
     ../../home/programs/tui/wikiman
     ../../home/programs/tui/navi

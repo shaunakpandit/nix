@@ -32,6 +32,11 @@ in {
         mode = "0600";
         path = "${home}/.ssh/gitlab";
       };
+      myx-config = {
+        owner = username;
+        mode = "0600";
+        path = "${home}/.config/myx/config.toml";
+      };
     };
   };
 
