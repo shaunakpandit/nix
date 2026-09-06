@@ -25,6 +25,7 @@
       allow id 1532:02a1 name "Razer Ornata V3"
       allow id 03f0:046b name "HP USB-C Dock G5"
       allow id 03f0:086b name "USB2734"
+      allow id 1b1c:1b75 name "CORSAIR HARPOON RGB PRO Gaming Mouse"
     '';
   };
 }
