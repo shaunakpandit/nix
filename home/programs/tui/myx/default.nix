@@ -17,7 +17,7 @@ in {
 
   xdg.desktopEntries.myx = {
     name = "Spotify";
-    exec = "${pkgs.ghostty}/bin/ghostty +new-window -e ${myx}/bin/myx";
+    exec = "${pkgs.ghostty}/bin/ghostty --window-padding-x=0 --window-padding-y=0 -e ${myx}/bin/myx";
     icon = "spotify";
     comment = "Control Spotify from the terminal";
     categories = ["Audio" "Music"];
