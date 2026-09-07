@@ -20,6 +20,7 @@
     ./usbguard.nix
     ./disko.nix
     ./secrets
+    ./wireguard.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
