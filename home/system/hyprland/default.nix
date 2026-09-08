@@ -147,6 +147,9 @@ in {
         "match:title run-bg, float on"
         "match:title run-bg, center on"
         "match:title run-bg, size 700 80"
+
+        "match:workspace special:scratch, opacity 1 1"
+        "match:workspace special:scratch, no_anim on"
       ];
 
       misc = {

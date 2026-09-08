@@ -41,7 +41,7 @@ in {
         "fadeLayersIn, 1, ${animationDuration}, menu_decel"
         "fadeLayersOut, 1, ${animationDuration}, menu_accel"
         "workspaces, 1, ${animationDuration}, menu_decel, slide"
-        "specialWorkspace, 1, ${animationDuration}, md3_decel, slidevert"
+        "specialWorkspace, 0, ${animationDuration}, md3_decel, slidevert"
       ];
     };
   };
